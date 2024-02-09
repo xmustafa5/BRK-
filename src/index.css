@@ -1,3 +1,6 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +13,116 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.GradientColor {
+  background: rgb(9, 18, 66);
+  background: linear-gradient(
+    60deg,
+    rgba(9, 18, 66, 0.6700805322128851) 35%,
+    rgba(9, 18, 66, 0.1518732492997199) 100%
+  );
+}
+.header {
+  background: transparent;
+  position: relative;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease-in;
+}
+.home {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../src/assets/img/background/Backgroound\ \(1\).jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 100px;
+}
+.GradientColorProducts {
+  background: rgb(244, 244, 244);
+  background: linear-gradient(
+    180deg,
+    rgba(244, 244, 244, 1) 35%,
+    rgba(244, 244, 244, 0.16307773109243695) 100%
+  );
+}
+.ImageWhyUs{
+  background-image: url("assets/img/background/BackgroundWhyUs.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bold {
+  font-family: bold;
+}
+
+
+.text {
+  clip-path: polygon(91% 0, 100% 18%, 100% 100%, 0 100%, 0 1%);
+
+  
+}
+.text:before {
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  content: "";
+  position: absolute;
+  width: 0;
+}
+
+.imageBgFooter{
+  background-image: url("assets/img/footer/Image\ \(1\).png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.Extrabold {
+  font-family: Extrabold;
+}
+.Italic {
+  font-family: Italic;
+}
+.light {
+  font-family: light;
+}
+.Medium {
+  font-family: Medium;
+}
+.Regular {
+  font-family: Regular;
+}
+@font-face {
+  font-family: "bold";
+  src: local("NeurialGrotesk"),
+    url("../src/assets/fonts/NeurialGrotesk-Bold.otf") format("truetype");
+}
+@font-face {
+  font-family: "Extrabold";
+  src: local("NeurialGrotesk"),
+    url("../src/assets/fonts/NeurialGrotesk-Extrabold.otf") format("truetype");
+}
+@font-face {
+  font-family: "Italic";
+  src: local("NeurialGrotesk"),
+    url("../src/assets/fonts/NeurialGrotesk-Italic.otf") format("truetype");
+}
+@font-face {
+  font-family: "light";
+  src: local("NeurialGrotesk"),
+    url("../src/assets/fonts/NeurialGrotesk-Light.otf") format("truetype");
+}
+@font-face {
+  font-family: "Medium";
+  src: local("NeurialGrotesk"),
+    url("../src/assets/fonts/NeurialGrotesk-Medium.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Regular";
+  src: local("NeurialGrotesk"),
+    url("../src/assets/fonts/NeurialGrotesk-Regular.otf") format("truetype");
 }
