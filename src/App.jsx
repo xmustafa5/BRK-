@@ -6,7 +6,7 @@ import Partners from "./components/Partners";
 import Products from "./components/Products";
 import Visiter from "./components/Visiter";
 import WhyUs from "./components/WhyUs";
-import { Route, BrowserRouter, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 function App() {
   return (<>
       <Home />

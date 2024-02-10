@@ -1,6 +1,5 @@
 import React from "react";
 import { facebook, instagram, linkedin } from "../assets/svg/socialMedia";
-import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
