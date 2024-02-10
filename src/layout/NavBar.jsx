@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { logo, logoText } from "../assets/svg";
 import {  Emails, Phones } from "../assets/svg/contact";
 
@@ -12,8 +13,11 @@ const NavBar = () => {
           <div className="flex justify-center items-center gap-4">
             {Emails}
             <div className="text-white light text-md">
+              <Link href="">
+
               <p>Email</p>
               <p>contact@brk-iq.com</p>
+              </Link>
             </div>
           </div>
           <div className="flex justify-center light items-center gap-4">

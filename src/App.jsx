@@ -6,10 +6,9 @@ import Partners from "./components/Partners";
 import Products from "./components/Products";
 import Visiter from "./components/Visiter";
 import WhyUs from "./components/WhyUs";
-
+import { Route, BrowserRouter, Routes } from "react-router-dom";
 function App() {
-  return (
-    <>
+  return (<>
       <Home />
       <About />
       <Products />
@@ -17,8 +16,15 @@ function App() {
       <Visiter />
       <Partners />
       <Congrat />
-      <Distributions/>
-    </>
+      <Distributions />
+      <Routes>
+        <Route path="/" exact component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/Products" component={Products} />
+        <Route path="/Partners" component={Partners} />
+        <Route path="/Distributions" component={Distributions} />
+      </Routes>
+  </>
   );
 }
 

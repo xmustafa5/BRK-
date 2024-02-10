@@ -6,7 +6,7 @@ import pru3 from "../assets/img/Product/pru3.png";
 import pru4 from "../assets/img/Product/pru4.png";
 export default function Products() {
   return (
-    <div className="GradientColorProducts h-screen flex gap-4  justify-center items-center flex-col ">
+    <div id="Products" className="GradientColorProducts h-screen flex gap-4  justify-center items-center flex-col ">
       <div className="bg-gray-200 flex  ">
         <p className=" font-bold text-yellow-120 flex justify-center items-center bg-yellow-120">
           |

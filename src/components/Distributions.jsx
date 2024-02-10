@@ -3,7 +3,7 @@ import { DistributionsFour, DistributionsOne, DistributionsThree, DistributionsT
 
 export default function Distributions() {
   return (
-    <div className="flex justify-center items-center flex-col h-[60vh] gap-6">
+    <div id="Distributions" className="flex justify-center items-center flex-col h-[60vh] gap-6">
       <div className="bg-gray-200 flex  ">
         <p className=" font-bold text-yellow-120 flex justify-center items-center bg-yellow-120">
           |

@@ -3,7 +3,7 @@ import mainImage from "../assets/img/about/image.png";
 import imaging from "../assets/img/about/imaging.png";
 export default function About() {
   return (
-    <div className="flex  h-[85vh]">
+    <div className="flex  h-[85vh]" id="about">
       <div className="  relative flex justify-center items-center w-[50vw]">
         <img src={imaging} className="w-[540px]" alt="" />
         <img
