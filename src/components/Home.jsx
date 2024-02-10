@@ -26,7 +26,6 @@ export default function Home() {
           <li className="text-white text-lg">
             <a href="#Distributions">Distributions</a>
           </li>
-          <span className="text-white text-opacity-60 ">|</span>
 
         </ul>
         <div className="flex gap-3 mr-24 h-full justify-center items-center">

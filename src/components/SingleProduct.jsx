@@ -16,7 +16,6 @@ function SingleProduct({ img, script, title }) {
             </p>
           </div>
           <p className="min-w-[250] w-full text-[#666C89]  ">{script}</p>
-         
         </div>
       </div>
     </div>

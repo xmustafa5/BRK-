@@ -1,5 +1,6 @@
 import { logo, logoText } from "../assets/svg";
 import { Emails, Phones } from "../assets/svg/contact";
+import { facebook, instagram, linkedin } from "../assets/svg/socialMedia";
 
 const Footer = () => {
   return (
@@ -43,9 +44,9 @@ const Footer = () => {
             </h2>
             <div className="flex flex-col w-full h-full  p-4 text-white gap-3 bg-blue-120 justify-center items-start">
               <p>About Us</p>
-              <p>About Us</p>
-              <p>About Us</p>
-              <p>About Us</p>
+              <p>Our Project</p>
+              <p>Products</p>
+              <p>Vendors</p>
               <p>About Us</p>
             </div>
           </div>
@@ -54,11 +55,12 @@ const Footer = () => {
               About Us
             </h2>
             <div className="flex flex-col w-full h-full  p-4 text-white gap-3 bg-blue-120 justify-center items-start">
-              <p>About Us</p>
-              <p>About Us</p>
-              <p>About Us</p>
-              <p>About Us</p>
-              <p>About Us</p>
+              <p>Profile</p>
+              <p>Vision</p>
+              <p>Mission</p>
+              <p>Timeline</p>
+              <p>ISOs</p>
+              <p>Careers</p>
             </div>
           </div>
 
@@ -72,9 +74,19 @@ const Footer = () => {
                 className="h-14 bg-blue-120 border border-gray-120 placeholder:outline-none placeholder:text-lg placeholder:pl-2"
                 placeholder="Email Here*"
               />
-              <button className=" bg-yellow-120 w-fit px-8 py-2 rounded-[0px]">
-                Send Now
-              </button>
+              <div className="flex  h-full justify-start  items-center gap-2 ">
+                <div className=" flex justify-center items-center relative whitespace-nowrap bg-yellow-120 w-fit px-8 py-2 h-full  rounded-[0px]">
+                 <button >
+                  
+                   Send Now
+                  </button>
+                <div className="flex  absolute left-36  gap-3  justify-center items-center  ">
+                  {linkedin}
+                  {facebook}
+                  {instagram}
+                </div>
+                </div>
+              </div>
             </div>
           </div>
           <div className="w-[15vw] h-full ">
