@@ -1,5 +1,5 @@
 import React from "react";
-import { DistributionsFour, DistributionsOne, DistributionsThree, DistributionsTwo } from "../assets/svg/Distributions";
+import { DistributionsFour, DistributionsOne, DistributionsThree, DistributionsTwo } from "../../assets/svg/Distributions";
 
 export default function Distributions() {
   return (

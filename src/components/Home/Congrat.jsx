@@ -1,7 +1,7 @@
 import React from "react";
-import congratImage from "../assets/img/congrat/image 5.png";
-import congratIcons from "../assets/img/congrat/image 1.png";
-import Pattern from "../assets/img/congrat/Pattern.png";
+import congratImage from "../../assets/img/congrat/image 5.png";
+import congratIcons from "../../assets/img/congrat/image 1.png";
+import Pattern from "../../assets/img/congrat/Pattern.png";
 export default function Congrat() {
   return (
     <div className="w-full h-screen flex justify-center items-centerd">

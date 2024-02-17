@@ -1,5 +1,5 @@
 import React from "react";
-import { partnerIcons } from "../assets/svg";
+import { partnerIcons } from "../../assets/svg";
 
 export default function Partners() {
   return (

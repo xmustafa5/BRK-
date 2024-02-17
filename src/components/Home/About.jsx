@@ -1,15 +1,15 @@
 import React from "react";
-import mainImage from "../assets/img/about/image.png";
-import imaging from "../assets/img/about/imaging.png";
+import mainImage from "../../assets/img/about/image.png";
+import imaging from "../../assets/img/about/imaging.png";
 export default function About() {
   return (
-    <div className="flex  h-[85vh]" id="about">
-      <div className="  relative flex justify-center items-center w-[50vw]">
+    <div className="flex h-[85vh]" id="about">
+      <div className="relative flex justify-center items-center w-[50vw]">
         <img src={imaging} className="w-[540px]" alt="" />
         <img
           src={mainImage}
           alt=""
-          className=" absolute w-[170px]  bottom-7 right-4 border-8 border-white"
+          className="absolute w-[170px]  bottom-7 right-4 border-8 border-white"
         />
       </div>
       <div className="flex justify-center gap-5 items-start flex-col">

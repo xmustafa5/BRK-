@@ -1,9 +1,9 @@
 import React from "react";
 import SingleProduct from "./SingleProduct";
-import pru1 from "../assets/img/Product/pru1.png";
-import pru2 from "../assets/img/Product/pru2.png";
-import pru3 from "../assets/img/Product/pru3.png";
-import pru4 from "../assets/img/Product/pru4.png";
+import pru1 from "../../assets/img/Product/pru1.png";
+import pru2 from "../../assets/img/Product/pru2.png";
+import pru3 from "../../assets/img/Product/pru3.png";
+import pru4 from "../../assets/img/Product/pru4.png";
 export default function Products() {
   return (
     <div id="Products" className="GradientColorProducts h-screen flex gap-4  justify-center items-center flex-col ">

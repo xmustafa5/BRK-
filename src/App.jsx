@@ -1,11 +1,11 @@
-import About from "./components/About";
-import Congrat from "./components/Congrat";
-import Distributions from "./components/Distributions";
-import Home from "./components/Home";
-import Partners from "./components/Partners";
-import Products from "./components/Products";
-import Visiter from "./components/Visiter";
-import WhyUs from "./components/WhyUs";
+import About from "./components/Home/About";
+import Congrat from "./components/Home/Congrat";
+import Distributions from "./components/Home/Distributions";
+import Home from "./components/Home/Home";
+import Partners from "./components/Home/Partners";
+import Products from "./components/Home/Products";
+import Visiter from "./components/Home/Visiter";
+import WhyUs from "./components/Home/WhyUs";
 import { Route, Routes } from "react-router-dom";
 function App() {
   return (<>

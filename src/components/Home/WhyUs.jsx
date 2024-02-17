@@ -1,6 +1,6 @@
 import React from "react";
-import { WhyUsIcons } from "../assets/svg";
-import whuUsImg from "../assets/img/whyUs/Images.png";
+import { WhyUsIcons } from "../../assets/svg";
+import whuUsImg from "../../assets/img/whyUs/Images.png";
 export default function WhyUs() {
   return (
     <div className="h-full">
