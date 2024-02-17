@@ -19,7 +19,7 @@ export default function About() {
       </div>
       <div className="flex justify-center gap-5 items-start flex-col">
         <MainTitle title="Company overview" />
-        <HugeTitle title='About Us'/>
+        <HugeTitle title="About Us" />
         <Paragraph
           main={false}
           p="Leverage agile frameworks to provide a robust synopsis for strategy
@@ -36,7 +36,7 @@ export default function About() {
 
         <h4 className="text-black-120 bold text-[16px]">Vision</h4>
         <SubTitle title="Establishing presence locally, and launch towards markets globalism" />
-        <Button title="About Us"/>
+        <Button title="About Us" />
       </div>
     </div>
   );
