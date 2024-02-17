@@ -1,7 +1,7 @@
 import MainTile from "../ui/MainTile";
 import Paragraph from "../ui/Paragraph";
-import MainHugeTitle from "../ui/MainHugeTitle";
 import Button from "../ui/Button";
+import MainHugeTitle from "../ui/MainHugeTitle";
 export default function Home() {
   return (
     <div className="home relative">
