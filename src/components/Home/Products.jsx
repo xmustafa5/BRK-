@@ -1,5 +1,5 @@
 import React from "react";
-import SingleProduct from "./SingleProduct";
+import SingleProduct from "../ui/SingleProduct";
 import pru1 from "../../assets/img/Product/pru1.png";
 import pru2 from "../../assets/img/Product/pru2.png";
 import pru3 from "../../assets/img/Product/pru3.png";
