@@ -36,7 +36,7 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("../src/assets/img/background/Backgroound\ \(1\).jpg");
+  background-image: url("../src/assets/img/background/landing-image.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -72,7 +72,13 @@ code {
 }
 
 .imageBgFooter {
-  background-image: url("assets/img/footer/Image\ \(1\).png");
+  background-image: url("assets/img/background/footer.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.landing-image {
+  background-image: url("assets/img/background/landing-image.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
