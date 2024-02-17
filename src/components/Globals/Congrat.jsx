@@ -9,7 +9,7 @@ export default function Congrat() {
         <img
           src={congratImage}
           alt="congrat"
-          className=" absolute z-50 -right-[170px] "
+          className=" absolute z-50 -right-[170px] w-[320px] "
         />
         d
       </div>

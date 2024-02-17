@@ -4,20 +4,13 @@ import pru1 from "../../assets/img/Product/pru1.png";
 import pru2 from "../../assets/img/Product/pru2.png";
 import pru3 from "../../assets/img/Product/pru3.png";
 import pru4 from "../../assets/img/Product/pru4.png";
+import MainTitle from "../ui/MainTitle";
+import HugeTitle from "../ui/HugeTitle";
 export default function Products() {
   return (
     <div id="Products" className="GradientColorProducts h-screen flex gap-4  justify-center items-center flex-col ">
-      <div className="bg-gray-200 flex  ">
-        <p className=" font-bold text-yellow-120 flex justify-center items-center bg-yellow-120">
-          |
-        </p>
-        <p className="text-md regular text-black-120 font-medium p-1">
-          Products
-        </p>
-      </div>
-      <h1 className="flex Medium flex-col gap-3  text-black-120 text-5xl font-semibold tracking-wider">
-        Our High-Quality Products
-      </h1>
+      <MainTitle title="Products" />
+      <HugeTitle title='Our High-Quality Products'/>
       <div className="flex  mx-20 flex-wrap gap-4">
         <SingleProduct
           img={pru1}
@@ -49,7 +42,7 @@ export default function Products() {
         />
       </div>
       <button className="Regular mt-2 bg-blue-120 w-fit px-8 py-2 text-white rounded-[0px]">
-            Show All Products{" "}
+            Show All Products
           </button>
     </div>
   );

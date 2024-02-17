@@ -1,21 +1,19 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
 }
-html{
-
+html {
   scroll-behavior: smooth;
 }
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 .GradientColor {
@@ -52,7 +50,7 @@ code {
     rgba(244, 244, 244, 0.16307773109243695) 100%
   );
 }
-.ImageWhyUs{
+.ImageWhyUs {
   background-image: url("assets/img/background/BackgroundWhyUs.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -62,11 +60,8 @@ code {
   font-family: bold;
 }
 
-
 .text {
   clip-path: polygon(91% 0, 100% 18%, 100% 100%, 0 100%, 0 1%);
-
-  
 }
 .text:before {
   border-left: 25px solid transparent;
@@ -76,13 +71,12 @@ code {
   width: 0;
 }
 
-.imageBgFooter{
+.imageBgFooter {
   background-image: url("assets/img/footer/Image\ \(1\).png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 
 .Extrabold {
   font-family: Extrabold;
@@ -129,4 +123,34 @@ code {
   font-family: "Regular";
   src: local("NeurialGrotesk"),
     url("../src/assets/fonts/NeurialGrotesk-Regular.otf") format("truetype");
+}
+
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 700px;
+  width: 500px;
+ 
+}
+.map-responsive iframe{
+  left: 0;
+  top: 0;
+  border: 0;
+  height: 100%;
+  width: 100%;
+}
+
+
+.scroll::-webkit-scrollbar {
+  width: 0.3em;
+  height: 100px;
+}
+
+.scroll::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background-color: #FABA20;
 }
