@@ -84,6 +84,13 @@ code {
   background-size: cover;
 }
 
+.pattern-image {
+  background-image: url("assets/about-page/Pattern.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .Extrabold {
   font-family: Extrabold;
 }

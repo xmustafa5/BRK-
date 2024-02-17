@@ -2,7 +2,7 @@ import React from "react";
 
 export default function MainTitle({ title }) {
   return (
-    <div className="bg-gray-200 flex ">
+    <div className="bg-gray-200 flex w-fit">
       <p className=" font-bold text-yellow-120 flex justify-center items-center bg-yellow-120">
         |
       </p>
