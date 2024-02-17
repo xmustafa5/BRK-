@@ -9,7 +9,8 @@ export default function Home() {
         <div className="flex gap-5 flex-col">
           <MainTile title="Industrial Investment" />
           <MainHugeTitle />
-          <Paragraph
+          <Paragraph 
+          main={true}
             p="In augue ligula, feugiat ut nulla consequat. Ut est lacus, molestie in
       arcu no, iaculis vehicula ipsum. Nunc faucibus, nisl id dapibus finibus,
       enim diam interdum nulla, sed laoreet risus lectus."

@@ -1,6 +1,11 @@
 import React from "react";
 import mainImage from "../../assets/img/about/image.png";
 import imaging from "../../assets/img/about/imaging.png";
+import MainTitle from "../ui/MainTitle";
+import Paragraph from "../ui/Paragraph";
+import SubTitle from "../ui/SubTitle";
+import Button from "../ui/Button";
+import HugeTitle from "../ui/HugeTitle";
 export default function About() {
   return (
     <div className="flex h-[85vh]" id="about">
@@ -13,40 +18,25 @@ export default function About() {
         />
       </div>
       <div className="flex justify-center gap-5 items-start flex-col">
-        <div className="bg-gray-200 flex ">
-          <p className=" font-bold text-yellow-120 flex justify-center items-center bg-yellow-120">
-            |
-          </p>
-          <p className="text-md regular text-black-120 font-medium p-1">
-            Company overview
-          </p>
-        </div>
-        <h1 className="flex bold flex-col gap-3  text-black-120 text-5xl font-semibold tracking-wider">
-          About Us
-        </h1>
-        <p className="max-w-[500px] text-[16px] text-gray-120">
-          Leverage agile frameworks to provide a robust synopsis for strategy
+        <MainTitle title="Company overview" />
+        <HugeTitle title='About Us'/>
+        <Paragraph
+          main={false}
+          p="Leverage agile frameworks to provide a robust synopsis for strategy
           foster collaborative thinking to further the overall value
-          proposition.
-        </p>
-        <p className="max-w-[500px] text-[16px] text-gray-120">
-          Sed ut perspiciatis, unde omnis iste natus error sit voluptatem
+          proposition."
+        />
+        <Paragraph
+          main={false}
+          p="Sed ut perspiciatis, unde omnis iste natus error sit voluptatem
           accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae
           ab illo inventore veritatis et quasi architecto beatae vitae dicta
-          sunt, explicabo. Nemo enim ipsam voluptatem quia voluptassit.
-        </p>
+          sunt, explicabo. Nemo enim ipsam voluptatem quia voluptassit."
+        />
+
         <h4 className="text-black-120 bold text-[16px]">Vision</h4>
-        <div className="bg-gray-200 flex ">
-          <p className=" font-bold text-yellow-120 flex justify-center items-center bg-yellow-120">
-            |
-          </p>
-          <p className=" text-[#666] p-2 Medium text-md regular ">
-            Establishing presence locally, and launch towards markets globalism
-          </p>
-        </div>
-        <button className=" bg-yellow-120 w-fit px-8 py-2 rounded-[0px]">
-          About Us
-        </button>
+        <SubTitle title="Establishing presence locally, and launch towards markets globalism" />
+        <Button title="About Us"/>
       </div>
     </div>
   );
