@@ -50,7 +50,6 @@ const NavBar = () => {
           <li className="text-white text-lg">
             <a href="#Distributions">Distributions</a>
           </li>
-
         </ul>
         <div className="flex gap-3 mr-24 h-full justify-center items-center">
           <div className="flex gap-3">

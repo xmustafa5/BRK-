@@ -4,12 +4,20 @@ import "./index.css";
 import App from "./App";
 import Layout from "./layout";
 import { BrowserRouter } from "react-router-dom";
+import {
+  QueryClient,
+  QueryClientProvider,
+  useQuery,
+} from "@tanstack/react-query";
+const queryClient = new QueryClient();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-    <BrowserRouter>
+  <BrowserRouter>
+    <QueryClientProvider client={queryClient}>
       <Layout>
         <App />
       </Layout>
-    </BrowserRouter>
+    </QueryClientProvider>
+  </BrowserRouter>
 );
