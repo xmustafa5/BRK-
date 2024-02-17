@@ -1,21 +1,19 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
 }
-html{
-
+html {
   scroll-behavior: smooth;
 }
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 .GradientColor {
@@ -38,7 +36,7 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("../src/assets/img/background/Backgroound\ \(1\).jpg");
+  background-image: url("../src/assets/img/background/landing-image.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -52,7 +50,7 @@ code {
     rgba(244, 244, 244, 0.16307773109243695) 100%
   );
 }
-.ImageWhyUs{
+.ImageWhyUs {
   background-image: url("assets/img/background/BackgroundWhyUs.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -62,11 +60,8 @@ code {
   font-family: bold;
 }
 
-
 .text {
   clip-path: polygon(91% 0, 100% 18%, 100% 100%, 0 100%, 0 1%);
-
-  
 }
 .text:before {
   border-left: 25px solid transparent;
@@ -76,13 +71,19 @@ code {
   width: 0;
 }
 
-.imageBgFooter{
-  background-image: url("assets/img/footer/Image\ \(1\).png");
+.imageBgFooter {
+  background-image: url("assets/img/background/footer.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+.landing-image {
+  background-image: url("assets/img/background/landing-image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .Extrabold {
   font-family: Extrabold;
