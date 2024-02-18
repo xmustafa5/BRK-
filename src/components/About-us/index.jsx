@@ -1,11 +1,18 @@
 import Landing from "./Landing";
-import AboutUs from "./AboutUs";
-
+import About from "../Globals/About";
+import CompanyValues from "./CompanyValues";
+import OurVision from "./OurVision";
+import CompanyObjectives from "./CompanyObjectives";
+import Distributions from "../Globals/Distributions";
 export default function AboutPage() {
   return (
     <>
       <Landing />
-      <AboutUs />
+      <About />
+      <CompanyValues />
+      <OurVision />
+      <CompanyObjectives />
+      <Distributions />
     </>
   );
 }
