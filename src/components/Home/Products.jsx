@@ -4,12 +4,12 @@ import pru1 from "../../assets/img/Product/pru1.png";
 import pru2 from "../../assets/img/Product/pru2.png";
 import pru3 from "../../assets/img/Product/pru3.png";
 import pru4 from "../../assets/img/Product/pru4.png";
-import MainTitle from "../ui/MainTitle";
+import LightLabel from "../ui/LightLabel";
 import HugeTitle from "../ui/HugeTitle";
 export default function Products() {
   return (
     <div id="Products" className="GradientColorProducts h-screen flex gap-4  justify-center items-center flex-col ">
-      <MainTitle title="Products" />
+      <LightLabel title="Products" />
       <HugeTitle title='Our High-Quality Products'/>
       <div className="flex  mx-20 flex-wrap gap-4">
         <SingleProduct

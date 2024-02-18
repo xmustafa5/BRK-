@@ -1,5 +1,5 @@
 import SectionTitle from "../ui/Section-title";
-import MainTitle from "../ui/MainTitle";
+import LightLabel from "../ui/LightLabel";
 import Paragraph from "../ui/Paragraph";
 
 import workerImg from "../../assets/about-page/Photo.png";
@@ -11,15 +11,13 @@ export default function OurVision() {
       <section className="bg-gray-20 relative overflow-hidden py-10 lg:py-0">
         <div className="container min-h-[90vh] flex gap-8 items-center flex-col lg:ml-16 lg:flex-row ">
           <div className="flex flex-col gap-4 items-center lg:items-start text-center lg:text-start flex-1">
-            <MainTitle title="About us" />
+            <LightLabel title="About us" />
             <SectionTitle title="After 2003" />
             <Paragraph p="Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition." />
             <Paragraph p="Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem quia voluptassit." />
             <Paragraph p="Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem quia voluptassit.Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem quia voluptassit" />
             <Paragraph p="Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium." />
           </div>
-          {/* <div className="bg-worker"></div> */}
-          {/* <div className="static md:absolute -right-4 bottom-0 max-w-[320px] md:max-w-[380px] lg:max-w-[500px] 2xl:max-w-[600px]"> */}
           <div className="justify-items-end flex-1">
             <img src={workerImg} alt="Worker" />
           </div>

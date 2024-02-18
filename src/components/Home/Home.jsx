@@ -1,4 +1,4 @@
-import MainTile from "../ui/MainTile";
+import MainLabel from "../ui/MainLabel";
 import Paragraph from "../ui/Paragraph";
 import Button from "../ui/Button";
 import MainHugeTitle from "../ui/MainHugeTitle";
@@ -7,7 +7,7 @@ export default function Home() {
     <div className="home relative">
       <div className="flex ml-24 w-full items-center">
         <div className="flex gap-5 flex-col">
-          <MainTile title="Industrial Investment" />
+          <MainLabel title="Industrial Investment" />
           <MainHugeTitle title="Your Supportive" haveSpan={true} />
           <Paragraph
             main={true}

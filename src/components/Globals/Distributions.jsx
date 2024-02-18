@@ -6,7 +6,7 @@ import {
   DistributionsTwo,
 } from "../../assets/svg/Distributions";
 
-import MainTitle from "../ui/MainTitle";
+import LightLabel from "../ui/LightLabel";
 import SectionTitle from "../ui/Section-title";
 
 export default function Distributions() {
@@ -16,7 +16,7 @@ export default function Distributions() {
       className="flex justify-center items-center flex-col h-[60vh] gap-6"
     >
       <div className="bg-gray-200 flex  ">
-        <MainTitle title="distributors" />
+        <LightLabel title="distributors" />
       </div>
       <SectionTitle title="Our Distributors" />
       <div className="flex  mx-20 flex-wrap gap-4">
