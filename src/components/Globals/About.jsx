@@ -10,13 +10,13 @@ import SectionTitle from "../ui/Section-title";
 
 export default function About({ includeVision }) {
   return (
-    <section id="about" className="py-20 lg:py-0">
+    <section id="about" className="py-10 lg:py-0">
       <div className="container min-h-[85vh] gap-8 flex flex-col-reverse lg:flex-row lg:items-center lg:justify-center">
         <div className="flex justify-center items-center lg:w-[50vw]">
           <div className="relative flex lg:mr-24">
             <img
               src={imaging}
-              className="w-[300px] md:w-[450px] lg:min-w-[540px]"
+              className="w-[300px] md:w-[450px] lg:min-w-[600px]"
               alt="Factory"
             />
             <img
