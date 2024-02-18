@@ -10,33 +10,22 @@ import "swiper/css/navigation";
 
 // import required modules
 import { FreeMode, Pagination, Navigation } from "swiper/modules";
+import axios from "axios";
+import { useQuery } from "@tanstack/react-query";
 
 export default function Partners() {
   const [visiblePartners, setVisiblePartners] = useState([]);
   const partnersRef = useRef([]);
-
-  const data = [
-    {
-      name: "Partner 1",
-      svg: partnerIcons,
-    },
-    {
-      name: "Partner 2",
-      svg: partnerIcons,
-    },
-    {
-      name: "Partner 3",
-      svg: partnerIcons,
-    },
-    {
-      name: "Partner 4",
-      svg: partnerIcons,
-    },
-    {
-      name: "Partner 5",
-      svg: partnerIcons,
-    },
-  ];
+  async function getPartner() {
+    const res = await axios.get(
+      `${process.env.REACT_APP_API_URL}api/v1/partners`
+    );
+    return res.data.content;
+  }
+  const { data } = useQuery({
+    queryKey: ["get-partner"],
+    queryFn: getPartner,
+  });
 
   const [startIndex, setStartIndex] = useState(0);
 
@@ -96,15 +85,16 @@ export default function Partners() {
           modules={[FreeMode, Pagination, Navigation]}
           className="mySwiper"
         >
-          <SwiperSlide>{partnerIcons}</SwiperSlide>
-          <SwiperSlide>{partnerIcons}</SwiperSlide>
-          <SwiperSlide>{partnerIcons}</SwiperSlide>
-          <SwiperSlide>{partnerIcons}</SwiperSlide>
-          <SwiperSlide>{partnerIcons}</SwiperSlide>
-          <SwiperSlide>{partnerIcons}</SwiperSlide>
-          <SwiperSlide>{partnerIcons}</SwiperSlide>
-          <SwiperSlide>{partnerIcons}</SwiperSlide>
-          <SwiperSlide>{partnerIcons}</SwiperSlide>
+          {data?.map((item) => (
+            <SwiperSlide className="flex flex-col">
+              <img
+                src={item?.logo}
+                alt="ded"
+                className="w-[200px] flex flex-col  h-[200px] bg-red-400"
+              />{" "}
+              <p className="text-lg font-medium">{item?.name}</p>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
       <button className="Regular mt-2 bg-blue-120 w-fit px-8 py-2 text-white rounded-[0px]">
