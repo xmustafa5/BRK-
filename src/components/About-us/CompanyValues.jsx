@@ -8,15 +8,17 @@ import StrengthImg from "../../assets/about-page/strength.svg";
 
 export default function CompanyValues() {
   return (
-    <div className="flex flex-col items-center py-20">
-      <MainTitle title="About us" />
-      <SectionTitle title="Company values" />
-      <div className="flex flex-col 2xl:gap-12 my-12 lg:flex-row ">
-        <Box title="Factory" imgPath={FactoryImg} />
-        <Box title="System" imgPath={SystemImg} />
-        <Box title="Strength" imgPath={StrengthImg} />
-        <Box title="Plumbing" imgPath={FactoryImg} />
+    <section className="flex justify-center py-10 xl:py-0">
+      <div className="container flex flex-col items-center">
+        <MainTitle title="About us" />
+        <SectionTitle title="Company values" />
+        <div className="flex flex-col gap-12 my-12 xl:flex-row ">
+          <Box title="Factory" imgPath={FactoryImg} />
+          <Box title="System" imgPath={SystemImg} />
+          <Box title="Strength" imgPath={StrengthImg} />
+          <Box title="Plumbing" imgPath={FactoryImg} />
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
