@@ -171,11 +171,6 @@ code {
 }
 
 
-
-
-
-
-
 .swiper {
   width: 90%;
   height: 100%;
@@ -241,3 +236,11 @@ display: flex !important;
   line-height: 1;
   
 }
+
+
+.responsive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
