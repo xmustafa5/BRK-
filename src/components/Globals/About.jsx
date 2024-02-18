@@ -1,11 +1,10 @@
 import React from "react";
 import mainImage from "../../assets/img/about/image.png";
 import imaging from "../../assets/img/about/imaging.png";
-import MainTitle from "../ui/MainTitle";
+import LightLabel from "../ui/LightLabel";
 import Paragraph from "../ui/Paragraph";
 import SubTitle from "../ui/SubTitle";
 import Button from "../ui/Button";
-import HugeTitle from "../ui/HugeTitle";
 import SectionTitle from "../ui/Section-title";
 
 export default function About({ includeVision }) {
@@ -27,7 +26,7 @@ export default function About({ includeVision }) {
           </div>
         </div>
         <div className="flex flex-col justify-center items-center gap-4 text-center lg:items-start lg:text-start">
-          <MainTitle title="Company overview" />
+          <LightLabel title="Company overview" />
           <SectionTitle title="About Us" />
           <Paragraph
             main={false}
