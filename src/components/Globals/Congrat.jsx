@@ -1,19 +1,24 @@
 import React from "react";
-import congratImage from "../../assets/img/congrat/image 5.png";
+import CertifiPng from "../../assets/img/partners/certificate.png";
 import congratIcons from "../../assets/img/congrat/image 1.png";
 import Pattern from "../../assets/img/congrat/Pattern.png";
 export default function Congrat() {
   return (
-    <div className="w-full h-screen flex justify-center items-centerd">
-      <div className="w-[40%] text-blue-120 bg-blue-120 relative flex justify-center items-center">
+    <section className="w-full relative md:bg-red-300  flex h-[800px] bg-gray-20 ">
+      <div className="absolute ml-[100px] mt-32 md:ml-[550px] mt-24 border-[20px] z-30 border-gray-300">
         <img
-          src={congratImage}
-          alt="congrat"
-          className=" absolute z-50 -right-[170px] w-[320px] "
+          className=" object-cover w-[300px] md:w-[350px] "
+         
+          src={CertifiPng}
+          alt="certificate "
         />
-        d
+        <div className="absolute -bottom-5 w-36 cursor-pointer tracking-wide opacity-90 -left-5 h-10 text-center text-lg font-bold flex justify-center items-center bg-[#FABA20]">
+          PREVIEW
+        </div>
       </div>
-      <div className="bg-gray-20 w-[60%] flex justify-center relative items-start pl-[200px] gap-10 flex-col">
+      <div className=" w-[600px] md:w-[800px] bg-[#091242]"></div>
+
+      <div className="bg-gray-20 w-[60%] flex justify-center relative items-start pl-[50px] md:pl-[200px] gap-10 flex-col">
         <div className="absolute z-10 w-full h-full  left-0 flex justify-center items-center">
           <img src={Pattern} alt="" className="w-full " />
         </div>
@@ -26,7 +31,7 @@ export default function Congrat() {
               ISO Certificates
             </p>
           </div>
-          <h1 className="flex bold flex-col gap-3  text-black-120 text-5xl font-semibold tracking-wider">
+          <h1 className="flex bold flex-col gap-3  text-black-120 text-2xl md:text-5xl font-semibold tracking-wider">
             Company Certificates
           </h1>
           <p className="max-w-[500px] text-[16px] text-gray-120">
@@ -38,7 +43,7 @@ export default function Congrat() {
           <button className=" bg-yellow-120 w-fit px-8 py-2 rounded-[0px]">
             Explore More
           </button>
-          <div className="flex gap-10 justify-center items-center">
+          <div className="flex gap-4 md:gap-10 justify-center items-center">
             <img src={congratIcons} alt="congratIcons" />
             <img src={congratIcons} alt="congratIcons" />
             <img src={congratIcons} alt="congratIcons" />
@@ -46,6 +51,6 @@ export default function Congrat() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
