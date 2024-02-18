@@ -17,11 +17,10 @@ code {
     monospace;
 }
 .GradientColor {
-  background: rgb(9, 18, 66);
   background: linear-gradient(
-    60deg,
-    rgba(9, 18, 66, 0.6700805322128851) 35%,
-    rgba(9, 18, 66, 0.1518732492997199) 100%
+    91deg,
+    #212b59 18.18%,
+    rgba(9, 18, 66, 0.2) 64.92%
   );
 }
 .header {
@@ -144,16 +143,14 @@ code {
   position: relative;
   height: 700px;
   width: 500px;
- 
 }
-.map-responsive iframe{
+.map-responsive iframe {
   left: 0;
   top: 0;
   border: 0;
   height: 100%;
   width: 100%;
 }
-
 
 .scroll::-webkit-scrollbar {
   width: 0.3em;
@@ -165,5 +162,5 @@ code {
 }
 
 .scroll::-webkit-scrollbar-thumb {
-  background-color: #FABA20;
+  background-color: #faba20;
 }
