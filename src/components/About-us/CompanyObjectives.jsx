@@ -13,7 +13,7 @@ export default function CompanyObjectives() {
     <div className="bg-[#F4F4F4] flex flex-col justify-center items-center py-20 px:8 md:px-36">
       <MainTitle title="About us" />
       <SectionTitle title="Company Objectives" />
-      <div className="flex flex-col flex-wrap justify-center items-center my-16 lg:flex-row lg:gap-48">
+      <div className="flex flex-col flex-wrap justify-center gap-16 items-center my-10 md:my-16 lg:flex-row lg:gap-48">
         <Box
           title="Sea Transport Services"
           imgPath={boatImg}
