@@ -1,18 +1,24 @@
 import React from "react";
-import congratImage from "../../assets/img/congrat/image 5.png";
+import CertifiPng from "../../assets/img/partners/certificate.png";
 import congratIcons from "../../assets/img/congrat/image 1.png";
 import Pattern from "../../assets/img/congrat/Pattern.png";
 export default function Congrat() {
   return (
-    <div className="w-full h-screen flex justify-center items-centerd">
-      <div className="w-[40%] text-blue-120 bg-blue-120 relative flex justify-center items-center">
+    <section className="w-full relative flex h-[800px] bg-gray-20 ">
+      <div className="absolute ml-[550px] mt-24 border-[20px] z-30 border-gray-300">
         <img
-          src={congratImage}
-          alt="congrat"
-          className=" absolute z-50 -right-[170px] w-[320px] "
+          className=" object-cover "
+          width={300}
+          height={300}
+          src={CertifiPng}
+          alt="certificate "
         />
-        d
+        <div className="absolute -bottom-5 w-36 cursor-pointer tracking-wide opacity-90 -left-5 h-10 text-center text-lg font-bold flex justify-center items-center bg-[#FABA20]">
+          PREVIEW
+        </div>
       </div>
+      <div className=" w-[800px] bg-[#091242]"></div>
+
       <div className="bg-gray-20 w-[60%] flex justify-center relative items-start pl-[200px] gap-10 flex-col">
         <div className="absolute z-10 w-full h-full  left-0 flex justify-center items-center">
           <img src={Pattern} alt="" className="w-full " />
@@ -46,6 +52,6 @@ export default function Congrat() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
