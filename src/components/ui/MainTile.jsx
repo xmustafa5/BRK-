@@ -1,4 +1,3 @@
-import React from "react";
 export default function MainTile({ title }) {
   return (
     <div className="bg-[#041C3780] flex w-fit">

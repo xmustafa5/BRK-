@@ -11,7 +11,7 @@ export default function HomePage() {
   return (
     <>
       <Home />
-      <About />
+      <About includeVision={true} />
       <Products />
       <WhyUs />
       <Visiter />

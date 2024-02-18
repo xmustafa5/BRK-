@@ -13,7 +13,7 @@ export default function Congrat() {
         />
         d
       </div>
-      <div className="w-[60%]  flex justify-center relative items-start pl-[200px] gap-10 flex-col bg-[#F4F4F4]">
+      <div className="bg-gray-20 w-[60%] flex justify-center relative items-start pl-[200px] gap-10 flex-col">
         <div className="absolute z-10 w-full h-full  left-0 flex justify-center items-center">
           <img src={Pattern} alt="" className="w-full " />
         </div>

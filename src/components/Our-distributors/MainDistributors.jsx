@@ -6,18 +6,20 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
 export default function MainDistributors() {
-    async function getDistributors() {
-        const res = await axios.get(`${process.env.REACT_APP_API_URL}api/v1/distributors`);
-        return res.data.content;
-    }
-    
-    console.log(process.env.REACT_APP_API_URL, 'env');
+  async function getDistributors() {
+    const res = await axios.get(
+      `${process.env.REACT_APP_API_URL}api/v1/distributors`
+    );
+    return res.data.content;
+  }
+
+  console.log(process.env.REACT_APP_API_URL, "env");
   const { data } = useQuery({
     queryKey: ["get-data-distributors"],
     queryFn: getDistributors,
   });
   return (
-    <div className="h-screen w-full bg-[#F4F4F4]">
+    <div className="h-screen w-full bg-gray-20">
       <div className="flex gap-4 w-full justify-center item-center">
         <div className="left  h-screen  pt-2  ">
           <div className="py-3 flex justify-start">
@@ -46,10 +48,9 @@ export default function MainDistributors() {
             />
           </div>
           <div className=" h-screen  overflow-y-scroll  pb-14 scroll">
-            {data?.map((item,index)=>(
-                <SingleDistributors item={item}  />
-                ))}
-         
+            {data?.map((item, index) => (
+              <SingleDistributors item={item} />
+            ))}
           </div>
         </div>
       </div>

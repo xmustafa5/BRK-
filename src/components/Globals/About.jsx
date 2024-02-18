@@ -6,20 +6,24 @@ import Paragraph from "../ui/Paragraph";
 import SubTitle from "../ui/SubTitle";
 import Button from "../ui/Button";
 import HugeTitle from "../ui/HugeTitle";
-export default function About() {
+import SectionTitle from "../ui/Section-title";
+
+export default function About({ includeVision }) {
   return (
     <div className="flex h-[85vh]" id="about">
-      <div className="relative flex justify-center items-center w-[50vw]">
-        <img src={imaging} className="w-[540px]" alt="" />
-        <img
-          src={mainImage}
-          alt=""
-          className="absolute w-[170px]  bottom-7 right-4 border-8 border-white"
-        />
+      <div className="flex justify-center items-center w-[50vw]">
+        <div className="relative">
+          <img src={imaging} className="min-w-[540px]" alt="" />
+          <img
+            src={mainImage}
+            alt=""
+            className="absolute min-w-[200px] -bottom-16 -right-16 border-[16px] border-white"
+          />
+        </div>
       </div>
       <div className="flex justify-center gap-5 items-start flex-col">
         <MainTitle title="Company overview" />
-        <HugeTitle title="About Us" />
+        <SectionTitle title="About Us" />
         <Paragraph
           main={false}
           p="Leverage agile frameworks to provide a robust synopsis for strategy
@@ -33,10 +37,21 @@ export default function About() {
           ab illo inventore veritatis et quasi architecto beatae vitae dicta
           sunt, explicabo. Nemo enim ipsam voluptatem quia voluptassit."
         />
-
-        <h4 className="text-black-120 bold text-[16px]">Vision</h4>
-        <SubTitle title="Establishing presence locally, and launch towards markets globalism" />
-        <Button title="About Us" />
+        {includeVision ? (
+          <>
+            <h4 className="text-black-120 bold text-[16px]">Vision</h4>
+            <SubTitle title="Establishing presence locally, and launch towards markets globalism" />
+            <Button title="About Us" />
+          </>
+        ) : (
+          <Paragraph
+            main={false}
+            p="Sed ut perspiciatis, unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae
+          ab illo inventore veritatis et quasi architecto beatae vitae dicta
+          sunt, explicabo. Nemo enim ipsam voluptatem quia voluptassit."
+          />
+        )}
       </div>
     </div>
   );
