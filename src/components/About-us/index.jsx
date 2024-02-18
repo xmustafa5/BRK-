@@ -10,9 +10,9 @@ export default function AboutPage() {
       <Landing />
       <About />
       <CompanyValues />
-      <OurVision />
+      {/*<OurVision />
       <CompanyObjectives />
-      <Distributions />
+      <Distributions /> */}
     </>
   );
 }

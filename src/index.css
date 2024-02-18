@@ -16,6 +16,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.navbar-bg {
+  background-color: #09124273;
+}
+
 .GradientColor {
   background: linear-gradient(
     91deg,
