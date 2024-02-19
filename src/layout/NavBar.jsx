@@ -4,15 +4,22 @@ import { Emails, Phones } from "../assets/svg/contact";
 import { facebook, instagram, linkedin } from "../assets/svg/socialMedia";
 
 import burgerMenuIcon from "../assets/menu.svg";
+import { useState } from "react";
 
 const NavBar = () => {
+  const [IsMenuOpened, setIsMenuOpened] = useState(false);
+
+  function toggleMenu() {
+    setIsMenuOpened((prev) => !prev);
+  }
+
   return (
     <header className="bg-blue-120 h-[80px] flex flex-col justify-center items-center">
       <div className="container relative flex justify-between items-center">
         <div className="flex gap-3 w-[200px] sm:w-[300px]">
           {logo} {logoText}
         </div>
-        <div className="lg:hidden">
+        <div className="lg:hidden" onClick={toggleMenu}>
           <img src={burgerMenuIcon} alt="More" />
         </div>
         <div className="hidden justify-center items-center gap-4 lg:flex">
@@ -34,30 +41,54 @@ const NavBar = () => {
           </div>
         </div>
       </div>
-      <nav className="navbar-bg w-[100%] hidden md:flex justify-center absolute top-20 h-[70px] z-10">
-        <div className="container h-full flex justify-between items-center gap-4">
-          <ul className="flex gap-4">
+      <nav
+        className={`navbar-bg w-[100%] flex justify-center absolute top-20 min-h-[70px] z-10 ${
+          !IsMenuOpened ? "hidden" : ""
+        }`}
+      >
+        <div
+          className={`container h-full flex justify-between items-center gap-4 ${
+            IsMenuOpened ? "flex-col" : ""
+          }`}
+        >
+          <ul
+            className={`flex gap-4 bg-[#faba20b8] ${
+              IsMenuOpened ? "flex-col right-4 p-4 absolute " : ""
+            }`}
+          >
             <li className="text-white text-lg">
               <a href="#home">Home</a>
             </li>
-            <span className="text-white text-opacity-60 ">|</span>
+            <span className="text-white text-opacity-60 hidden md:inline">
+              |
+            </span>
             <li className="text-white text-lg">
               <a href="#about">About</a>
             </li>
-            <span className="text-white text-opacity-60 ">|</span>
+            <span className="text-white text-opacity-60 hidden md:inline">
+              |
+            </span>
             <li className="text-white text-lg">
               <a href="#Products">Products</a>
             </li>
-            <span className="text-white text-opacity-60 ">|</span>
+            <span className="text-white text-opacity-60 hidden md:inline">
+              |
+            </span>
             <li className="text-white text-lg">
               <a href="#Partners">Partners</a>
             </li>
-            <span className="text-white text-opacity-60 ">|</span>
+            <span className="text-white text-opacity-60 hidden md:inline">
+              |
+            </span>
             <li className="text-white text-lg">
               <a href="#Distributions">Distributions</a>
             </li>
           </ul>
-          <div className="flex gap-4 h-full justify-center items-center">
+          <div
+            className={`flex gap-4 h-full justify-center items-center ${
+              IsMenuOpened ? "absolute left-4" : ""
+            }`}
+          >
             <div className="flex gap-4">
               {linkedin}
               {facebook}
