@@ -23,12 +23,13 @@ export default function OurVision() {
           </div>
         </div>
       </section>
-      <section className="bg-yellow-120 pattern-image flex flex-col gap-8 items-center justify-center min-h-[50vh]">
-        <DarkLabel title="our vision" />
-        <h2 className="text-xl bold text-blue-110 text-center sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
-          Establishing presence locally, and launch{" "}
-          <span className="block">towards markets globalism</span>
-        </h2>
+      <section className="bg-yellow-120 pattern-image flex justify-center">
+        <div className="container flex flex-col gap-8 items-center justify-center min-h-[50vh]">
+          <DarkLabel title="our vision" />
+          <h2 className="text-xl bold text-blue-110 text-center sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
+            Establishing presence locally, and launch towards markets globalism
+          </h2>
+        </div>
       </section>
     </>
   );
