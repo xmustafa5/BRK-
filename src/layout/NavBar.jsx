@@ -43,7 +43,7 @@ const NavBar = () => {
       </div>
       <nav
         className={`navbar-bg w-[100%] flex justify-center absolute top-20 min-h-[70px] z-10 ${
-          !IsMenuOpened ? "hidden" : ""
+          !IsMenuOpened ? "hidden md:flex" : ""
         }`}
       >
         <div
@@ -52,8 +52,8 @@ const NavBar = () => {
           }`}
         >
           <ul
-            className={`flex gap-4 bg-[#faba20b8] ${
-              IsMenuOpened ? "flex-col right-4 p-4 absolute " : ""
+            className={`flex gap-4 ${
+              IsMenuOpened ? "flex-col right-4 p-4 absolute bg-[#faba20b8]" : ""
             }`}
           >
             <li className="text-white text-lg">
@@ -94,9 +94,9 @@ const NavBar = () => {
               {facebook}
               {instagram}
             </div>
-            <div className="bg-yellow-120 w-full h-full flex justify-center items-center p-3">
+            <button className="bg-yellow-120 w-full h-full flex justify-center items-center p-3">
               <p className="text-md font-medium ">Contact Us</p>
-            </div>
+            </button>
           </div>
         </div>
       </nav>
