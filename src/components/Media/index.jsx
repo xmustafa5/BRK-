@@ -45,14 +45,14 @@ function MediaPage() {
   return (
     <>
       <div className="!h-[60vh] home ">
-        <div className="container flex justify-center gap-5 items-start flex-col">
+        <div className="container flex justify-center gap-5 items-start flex-col ">
           <LightLabel title="Industrial Investment" />
           <HugeTitle title="Media" />
         </div>
       </div>
       <div className="responsive-grid gap-5 w-[70%] mx-auto py-40">
         {data.map((item, index) => (
-          <div className=" flex flex-col lg:flex-row bg-[#EEF0F8]" key={index}>
+          <div className="  responsive-grid bg-[#EEF0F8]" key={index}>
             {index % 4 < 2 ? (
               <>
                 <img src={img} alt="image" className="block" />
