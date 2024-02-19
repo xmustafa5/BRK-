@@ -50,7 +50,7 @@ function MediaPage() {
           <HugeTitle title="Media" />
         </div>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 w-[70%] mx-auto py-40">
+      <div className="responsive-grid gap-5 w-[70%] mx-auto py-40">
         {data.map((item, index) => (
           <div className=" flex flex-col lg:flex-row bg-[#EEF0F8]" key={index}>
             {index % 4 < 2 ? (

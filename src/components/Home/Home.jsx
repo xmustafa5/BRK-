@@ -4,9 +4,9 @@ import Button from "../ui/Button";
 import MainHugeTitle from "../ui/MainHugeTitle";
 export default function Home() {
   return (
-    <div className="home relative">
-      <div className="flex ml-24 w-full items-center">
-        <div className="flex gap-5 flex-col">
+    <section className="home relative">
+      <div className="flex container w-full items-center text-center sm:text-left">
+        <div className="flex gap-5 flex-col items-center sm:items-start">
           <MainLabel title="Industrial Investment" />
           <MainHugeTitle title="Your Supportive" haveSpan={true} />
           <Paragraph
@@ -18,6 +18,6 @@ export default function Home() {
           <Button title="About Us" />
         </div>
       </div>
-    </div>
+    </section>
   );
 }

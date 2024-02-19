@@ -9,7 +9,7 @@ const NavBar = () => {
   return (
     <header className="bg-blue-120 h-[80px] flex flex-col justify-center items-center">
       <div className="container relative flex justify-between items-center">
-        <div className="flex gap-3">
+        <div className="flex gap-3 w-[200px] sm:w-[300px]">
           {logo} {logoText}
         </div>
         <div className="lg:hidden">

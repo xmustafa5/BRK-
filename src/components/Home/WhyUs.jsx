@@ -1,21 +1,15 @@
 import React from "react";
 import { WhyUsIcons } from "../../assets/svg";
 import whuUsImg from "../../assets/img/whyUs/Images.png";
+import LightLabel from "../ui/LightLabel";
 export default function WhyUs() {
   return (
-    <div className="h-full">
+    <section className="h-full">
       <div className="ImageWhyUs h-[60vh]"></div>
-      <div className="h-[60vh] relative flex justify-center items-center">
-        <div className="bg-white text  p-6 absolute  -top-[200px] flex ">
-          <div className="w-[50%] flex justify-center items-start gap-4 flex-col">
-            <div className="bg-gray-200 w-fit flex  ">
-              <p className=" font-bold text-yellow-120 flex justify-center items-center bg-yellow-120">
-                |
-              </p>
-              <p className="text-md  regular text-black-120 font-medium p-1">
-                Why us
-              </p>
-            </div>
+      <div className="h-[80vh] relative flex justify-center items-center md:h-[60vh]">
+        <div className="bg-white text p-6 absolute -top-[200px] flex flex-col justify-center gap-8 md:flex-row">
+          <div className="flex-1 flex justify-center items-start gap-4 flex-col">
+            <LightLabel title="Why us" />
             <h1 className="flex  flex-col gap-3 max-w-[500px]  text-black-120 bold text-3xl font-semibold tracking-wider">
               We provide full range global Piping and fittings solution
             </h1>
@@ -40,11 +34,11 @@ export default function WhyUs() {
               </div>
             </div>
           </div>
-          <div className="w-[50%] flex justify-center items-center">
+          <div className="flex-1 flex justify-center items-center">
             <img src={whuUsImg} alt="whyUs" className="w-[500px] pr-8" />
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
