@@ -1,6 +1,6 @@
 import img from "../../assets/img/media/Photo.png";
-import HugeTitle from "../ui/HugeTitle";
 import LightLabel from "../ui/LightLabel";
+import MainHugeTitle from "../ui/MainHugeTitle";
 
 function MediaPage() {
   const data = [
@@ -47,7 +47,7 @@ function MediaPage() {
       <div className="!h-[60vh] home ">
         <div className="container flex justify-center gap-5 items-start flex-col ">
           <LightLabel title="Industrial Investment" />
-          <HugeTitle title="Media" />
+          <MainHugeTitle title="Media" />
         </div>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 w-[70%] mx-auto py-40">
