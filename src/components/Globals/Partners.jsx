@@ -12,6 +12,8 @@ import "swiper/css/navigation";
 import { FreeMode, Pagination, Navigation } from "swiper/modules";
 import axios from "axios";
 import { useQuery } from "@tanstack/react-query";
+import SectionTitle from "../ui/Section-title";
+import LightLabel from "../ui/LightLabel";
 
 export default function Partners() {
   const [visiblePartners, setVisiblePartners] = useState([]);
@@ -58,21 +60,13 @@ export default function Partners() {
     };
   }, [startIndex]);
   return (
-    <div
+    <section
       id="Partners"
       className="flex my-6 justify-center items-center flex-col h-[50vh] gap-6"
     >
-      <div className="bg-gray-200 flex">
-        <p className="font-bold text-yellow-120 flex justify-center items-center bg-yellow-120">
-          |
-        </p>
-        <p className="text-md regular text-black-120 font-medium p-1">
-          Partners
-        </p>
-      </div>
-      <h1 className="flex bold flex-col gap-3  text-black-120 text-5xl font-semibold tracking-wider">
-        Our Partners
-      </h1>
+      <LightLabel title="Partners" />
+      <SectionTitle title="Our Partners" />
+      <h1 className="flex bold flex-col gap-3  text-black-120 text-5xl font-semibold tracking-wider"></h1>
       <div className="w-full h-full flex justify-center items-center">
         <Swiper
           slidesPerView={4}
@@ -100,6 +94,6 @@ export default function Partners() {
       <button className="Regular mt-2 bg-blue-120 w-fit px-8 py-2 text-white rounded-[0px]">
         Show All Partners
       </button>
-    </div>
+    </section>
   );
 }
