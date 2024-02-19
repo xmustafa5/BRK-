@@ -7,13 +7,13 @@ const Footer = () => {
     <footer className="h-full bg-blue-120">
       <div className="imageBgFooter h-[12vh] w-full md:h-[50vh]">image</div>
       <div className="container flex flex-col h-full items-center gap-4 w-full ">
-        <div className="flex h-full items-start w-full">
+        <div className="flex h-full w-full">
           <div className="hidden w-[14vw] h-full md:block">
             <div className="text-[#1C2551] bg-[#1C2551] h-20">.</div>
             <div className="bg-blue-120 w-full h-full">.</div>
           </div>
-          <div className="flex flex-col h-full w-[25vw] bg-blue-120 justify-center items-start ">
-            <div className="flex gap-3 h-20 p-2 justify-start items-center max-w-[200px]">
+          <div className="flex flex-col h-full bg-blue-120 w-full">
+            <div className="flex gap-3 h-20 p-2 items-center max-w-[200px]">
               {logo} {logoText}
             </div>
             <p className="hidden p-2 bg-[#] text-[16px] text-white md:block">
@@ -21,7 +21,7 @@ const Footer = () => {
               strategy foster collaborative thinking to further the overall
               value proposition.
             </p>
-            <div className="hidden flex-col justify-center items-center mr-24 gap-4 md:flex">
+            <div className="flex items-center gap-4">
               <div className="flex justify-center items-center gap-4">
                 {Emails}
                 <div className="text-white light text-md">
@@ -32,8 +32,8 @@ const Footer = () => {
               <div className="flex justify-center light items-center gap-4">
                 {Phones}
                 <div className="text-white text-md">
-                  <p>Email</p>
-                  <p>contact@brk-iq.com</p>
+                  <p>Call us</p>
+                  <p>+964 (771) 333-9999</p>
                 </div>
               </div>
             </div>
