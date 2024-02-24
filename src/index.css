@@ -239,7 +239,8 @@ code {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 40px;
-  img{
-    width: 100%;
-  }
+}
+
+.responsive-grid img{
+  width: 100%;
 }
