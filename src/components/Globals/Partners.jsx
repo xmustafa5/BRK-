@@ -31,7 +31,6 @@ export default function Partners() {
     >
       <LightLabel title="Partners" />
       <SectionTitle title="Our Partners" />
-      <h1 className="flex bold flex-col gap-3  text-black-120 text-5xl font-semibold tracking-wider"></h1>
       <div className="w-full h-full flex justify-center items-center">
         <Swiper
           slidesPerView={4}

@@ -1,4 +1,4 @@
-import img from "../../assets/img/media/Photo.png";
+import imgo from "../../assets/img/media/Photo.png";
 import LightLabel from "../ui/LightLabel";
 import MainHugeTitle from "../ui/MainHugeTitle";
 
@@ -8,25 +8,25 @@ function MediaPage() {
       date: "2021-07-20",
       title:
         "BRK is now the official distributor of the world's leading brands in Iraq",
-      img: img,
+      img: imgo,
     },
     {
       date: "2021-07-20",
       title:
         "BRK is now the official distributor of the world's leading brands in Iraq",
-      img: img,
+      img: imgo,
     },
     {
       date: "2021-07-20",
       title:
         "BRK is now the official distributor of the world's leading brands in Iraq",
-      img: img,
+      img: imgo,
     },
     {
       date: "2021-07-20",
       title:
         "BRK is now the official distributor of the world's leading brands in Iraq",
-      img: img,
+      img: imgo,
     },
     {
       date: "2021-07-20",
@@ -55,7 +55,7 @@ function MediaPage() {
           <div className="  responsive-grid bg-[#EEF0F8]" key={index}>
             {index % 4 < 2 ? (
               <>
-                <img src={img} alt="image" className="block" />
+                <img src={imgo} alt="image" className="block" />
                 <div className="flex flex-col justify-between p-5">
                   <span className="text-gray-120">{item.date}</span>
                   <h3 className="text-[26px] text-black-120">{item.title}</h3>
@@ -67,7 +67,7 @@ function MediaPage() {
                   <span className="text-gray-120">{item.date}</span>
                   <h3 className="text-[26px] text-black-120">{item.title}</h3>
                 </div>
-                <img src={img} alt="image" className="block" />
+                <img src={imgo} alt="image" className="block" />
               </>
             )}
           </div>
