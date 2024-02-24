@@ -3,7 +3,7 @@ import About from "../Globals/About";
 import CompanyValues from "./CompanyValues";
 import OurVision from "./OurVision";
 import CompanyObjectives from "./CompanyObjectives";
-import Distributions from "../Globals/Distributions";
+import Distributions from "../Globals/Distributors";
 export default function AboutPage() {
   return (
     <>

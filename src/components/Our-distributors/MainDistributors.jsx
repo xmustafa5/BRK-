@@ -1,6 +1,6 @@
 import React from "react";
 import Paragraph from "../ui/Paragraph";
-import { Bdoor, searchInput } from "../../assets/svg/Distributors";
+import {  searchInput } from "../../assets/svg/Distributors";
 import SingleDistributors from "./SingleDistributors";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";

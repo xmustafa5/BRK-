@@ -5,7 +5,7 @@ import WhyUs from "./WhyUs";
 import Visiter from "./Visiter";
 import Partners from "../Globals/Partners";
 import Congrat from "../Globals/Congrat";
-import Distributions from "../Globals/Distributions";
+import Distributors from "../Globals/Distributors";
 
 export default function HomePage() {
   return (
@@ -16,8 +16,8 @@ export default function HomePage() {
       <WhyUs />
       <Visiter />
       <Partners />
-      {/* <Congrat />
-      <Distributions /> */}
+      <Congrat />
+      <Distributors />
     </>
   );
 }

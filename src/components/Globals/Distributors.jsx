@@ -1,37 +1,40 @@
-import React from "react";
+// import required modules
+import { FreeMode, Pagination, Navigation } from "swiper/modules";
+import axios from "axios";
+import { useQuery } from "@tanstack/react-query";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import LightLabel from "../ui/LightLabel";
+import SectionTitle from "../ui/Section-title";
+
+// Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import { FreeMode, Pagination, Navigation } from "swiper/modules";
-import axios from "axios";
-import { useQuery } from "@tanstack/react-query";
-import SectionTitle from "../ui/Section-title";
-import LightLabel from "../ui/LightLabel";
-
-export default function Partners() {
-  async function getPartner() {
+export default function Distributions() {
+  async function getDistributors() {
     const res = await axios.get(
-      `${process.env.REACT_APP_API_URL}api/v1/partners`
+      `${process.env.REACT_APP_API_URL}api/v1/distributors`
     );
     return res.data.content;
   }
   const { data } = useQuery({
-    queryKey: ["get-partner"],
-    queryFn: getPartner,
+    queryKey: ["get-distributors"],
+    queryFn: getDistributors,
   });
 
   return (
     <section
-      id="Partners"
-      className="flex my-6 justify-center items-center flex-col h-[50vh] gap-6"
+      id="Distributions"
+      className="flex justify-center items-center flex-col h-[60vh] gap-6"
     >
-      <LightLabel title="Partners" />
-      <SectionTitle title="Our Partners" />
-      <h1 className="flex bold flex-col gap-3  text-black-120 text-5xl font-semibold tracking-wider"></h1>
+      <div className="bg-gray-200 flex  ">
+        <LightLabel title="distributors" />
+      </div>
+      <SectionTitle title="Our Distributors" />
+
       <div className="w-full h-full flex justify-center items-center">
         <Swiper
           slidesPerView={4}
@@ -45,7 +48,7 @@ export default function Partners() {
           className="mySwiper"
         >
           {data?.map((item) => (
-            <SwiperSlide className="flex flex-col">
+            <SwiperSlide className="flex flex-col" key={item.key}>
               <img
                 src={item?.logo}
                 alt="ded"
@@ -56,9 +59,6 @@ export default function Partners() {
           ))}
         </Swiper>
       </div>
-      <button className="Regular mt-2 bg-blue-120 w-fit px-8 py-2 text-white rounded-[0px]">
-        Show All Partners
-      </button>
     </section>
   );
 }

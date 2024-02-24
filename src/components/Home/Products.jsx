@@ -9,7 +9,7 @@ import HugeTitle from "../ui/HugeTitle";
 export default function Products() {
   return (
     <section
-      id="Products"
+      id="products"
       className="GradientColorProducts flex justify-center py-10"
     >
       <div className="container min-h-screen flex gap-4 justify-center items-center flex-col">

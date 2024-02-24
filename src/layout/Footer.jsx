@@ -21,7 +21,7 @@ const Footer = () => {
               strategy foster collaborative thinking to further the overall
               value proposition.
             </p>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 flex-wrap">
               <div className="flex justify-center items-center gap-4">
                 {Emails}
                 <div className="text-white light text-md">
@@ -74,7 +74,7 @@ const Footer = () => {
                 className="h-14 bg-blue-120 border border-gray-120 placeholder:outline-none placeholder:text-lg placeholder:pl-2"
                 placeholder="Email Here*"
               />
-              <div className="flex  h-full justify-start  items-center gap-2 ">
+              <div className="flex h-full justify-start  items-center gap-2 ">
                 <div className=" flex justify-center items-center relative whitespace-nowrap bg-yellow-120 w-fit px-8 py-2 h-full  rounded-[0px]">
                   <button>Send Now</button>
                   <div className="flex  absolute left-36  gap-3  justify-center items-center  ">

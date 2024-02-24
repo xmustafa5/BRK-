@@ -1,5 +1,4 @@
 import React from "react";
-import Paragraph from "../ui/Paragraph";
 import MainHugeTitle from "../ui/MainHugeTitle";
 import MainLabel from "../ui/MainLabel";
 

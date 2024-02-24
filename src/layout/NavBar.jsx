@@ -42,7 +42,7 @@ const NavBar = () => {
         </div>
       </div>
       <nav
-        className={`navbar-bg w-[100%] flex justify-center absolute top-20 min-h-[70px] z-10 ${
+        className={`navbar-bg w-[100%] flex justify-center items-center absolute top-20 min-h-[70px] z-10 ${
           !IsMenuOpened ? "hidden md:flex" : ""
         }`}
       >
@@ -57,13 +57,13 @@ const NavBar = () => {
             }`}
           >
             <li className="text-white text-lg">
-              <a href="#home">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <span className="text-white text-opacity-60 hidden md:inline">
               |
             </span>
             <li className="text-white text-lg">
-              <a href="#about">About</a>
+              <Link to="aboutus">About</Link>
             </li>
             <span className="text-white text-opacity-60 hidden md:inline">
               |
@@ -75,13 +75,19 @@ const NavBar = () => {
               |
             </span>
             <li className="text-white text-lg">
-              <a href="#Partners">Partners</a>
+              <Link to="partners">Partners</Link>
             </li>
             <span className="text-white text-opacity-60 hidden md:inline">
               |
             </span>
             <li className="text-white text-lg">
-              <a href="#Distributions">Distributions</a>
+              <Link to="our-distributors">Distributions</Link>
+            </li>
+            <span className="text-white text-opacity-60 hidden md:inline">
+              |
+            </span>
+            <li className="text-white text-lg">
+              <Link to="media">Media</Link>
             </li>
           </ul>
           <div
