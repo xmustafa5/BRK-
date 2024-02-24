@@ -32,13 +32,13 @@ function MediaPage() {
       date: "2021-07-20",
       title:
         "BRK is now the official distributor of the world's leading brands in Iraq",
-      img: img,
+      img: imgo,
     },
     {
       date: "2021-07-20",
       title:
         "BRK is now the official distributor of the world's leading brands in Iraq",
-      img: img,
+      img: imgo,
     },
   ];
 
