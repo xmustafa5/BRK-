@@ -9,7 +9,7 @@ export const LanguageProvider = ({ children }) => {
   };
 
   return (
-    <LanguageContext.Provider value={{ language, toggleLanguage , ar:language === 'ar',en:language === 'en' }}>
+    <LanguageContext.Provider value={{ language, toggleLanguage , ar:language === 'ar',en:language === 'en' , light: language === 'en' ? 'light' : 'lightAr' }}>
       {children}
     </LanguageContext.Provider>
   );

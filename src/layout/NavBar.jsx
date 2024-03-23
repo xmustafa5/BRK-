@@ -9,7 +9,7 @@ import LanguageContext from "../LanguageContext";
 
 const NavBar = () => {
   const [IsMenuOpened, setIsMenuOpened] = useState(false);
-  const { language, toggleLanguage,ar,en } = useContext(LanguageContext);
+  const { language, toggleLanguage,ar,en ,light} = useContext(LanguageContext);
   function toggleMenu() {
     setIsMenuOpened((prev) => !prev);
   }
@@ -27,18 +27,18 @@ const NavBar = () => {
         <div className="hidden justify-center items-center gap-4 lg:flex">
           <div className="flex justify-center items-center gap-4">
             {Emails}
-            <div className="text-white light text-md">
+            <div className={`text-white light text-md`}>
               <Link href="">
-                <p>Email</p>
+                <p>{ar ? 'البريد الالكتروني':'Email'}</p>
                 <p>contact@brk-iq.com</p>
               </Link>
             </div>
           </div>
-          <div className="flex justify-center light items-center gap-4">
+          <div className={`flex justify-center ${light} items-center gap-4`}>
             {Phones}
             <div className="text-white text-md">
-              <p>Call Us </p>
-              <p>+964 (771) 333-9999</p>
+              <p>{ar ? 'اتصل بنا' :'Call Us'  }</p>
+              <p>{ar? '+964 (771) 333-9999' :  '+964 (771) 333-9999'}</p>
             </div>
           </div>
         </div>
