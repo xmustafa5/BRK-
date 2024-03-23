@@ -9,13 +9,18 @@ import LanguageContext from "../LanguageContext";
 
 const NavBar = () => {
   const [IsMenuOpened, setIsMenuOpened] = useState(false);
-  const { language, toggleLanguage,ar,en ,light} = useContext(LanguageContext);
+  const { language, toggleLanguage, ar, en, light } =
+    useContext(LanguageContext);
   function toggleMenu() {
     setIsMenuOpened((prev) => !prev);
   }
 
   return (
-    <header className={`bg-blue-120 ${ar &&  'rtl'} h-[80px] flex flex-col justify-center items-center`}>
+    <header
+      className={`bg-blue-120 ${
+        ar && "rtl"
+      } h-[80px] flex flex-col justify-center items-center`}
+    >
       <div className="container relative flex justify-between  items-center">
         <div className="flex gap-3 w-[200px] sm:w-[300px]">
           {logo} {logoText}
@@ -23,13 +28,13 @@ const NavBar = () => {
         <div className="lg:hidden" onClick={toggleMenu}>
           <img src={burgerMenuIcon} alt="More" />
         </div>
-        <button onClick={toggleLanguage}>{ar ? 'انكليزي' : 'arabic'}</button>
+        <button onClick={toggleLanguage}>{ar ? "انكليزي" : "arabic"}</button>
         <div className="hidden justify-center items-center gap-4 lg:flex">
           <div className="flex justify-center items-center gap-4">
             {Emails}
             <div className={`text-white light text-md`}>
               <Link href="">
-                <p>{ar ? 'البريد الالكتروني':'Email'}</p>
+                <p>{ar ? "البريد الالكتروني" : "Email"}</p>
                 <p>contact@brk-iq.com</p>
               </Link>
             </div>
@@ -37,8 +42,8 @@ const NavBar = () => {
           <div className={`flex justify-center ${light} items-center gap-4`}>
             {Phones}
             <div className="text-white text-md">
-              <p>{ar ? 'اتصل بنا' :'Call Us'  }</p>
-              <p>{ar? '+964 (771) 333-9999' :  '+964 (771) 333-9999'}</p>
+              <p>{ar ? "اتصل بنا" : "Call Us"}</p>
+              <p>{ar ? "+964 (771) 333-9999" : "+964 (771) 333-9999"}</p>
             </div>
           </div>
         </div>
@@ -59,43 +64,45 @@ const NavBar = () => {
             }`}
           >
             <li className="text-white text-lg">
-              <Link to="/">Home</Link>
+              <Link to="/">{ar ? "الرئيسية" : "Home"}</Link>
             </li>
             <span className="text-white text-opacity-60 hidden md:inline">
               |
             </span>
             <li className="text-white text-lg">
-              <Link to="aboutus">About</Link>
+              <Link to="aboutus">{ar ? "من نحن" : "About"}</Link>
             </li>
             <span className="text-white text-opacity-60 hidden md:inline">
               |
             </span>
             <li className="text-white text-lg">
-              <a href="#Products">Products</a>
+              <a href="#Products">{ar ? "المنتجات" : "Products"}</a>
             </li>
             <span className="text-white text-opacity-60 hidden md:inline">
               |
             </span>
             <li className="text-white text-lg">
-              <Link to="partners">Partners</Link>
+              <Link to="partners">{ar ? "الشركاء" : "Partners"}</Link>
             </li>
             <span className="text-white text-opacity-60 hidden md:inline">
               |
             </span>
             <li className="text-white text-lg">
-              <Link to="our-distributors">Distributions</Link>
+              <Link to="our-distributors">
+                {ar ? "الموزعين" : "Distributions"}
+              </Link>
             </li>
             <span className="text-white text-opacity-60 hidden md:inline">
               |
             </span>
             <li className="text-white text-lg">
-              <Link to="media">Media</Link>
+              <Link to="media">{ar ? "الوسائط" : `Media`}</Link>
             </li>
           </ul>
           <div
             className={`flex gap-4 h-full justify-center items-center ${
-              IsMenuOpened ? "absolute left-4" : ""
-            }`}
+              ar && "ltr"
+            } ${IsMenuOpened ? "absolute left-4" : ""}`}
           >
             <div className="flex gap-4">
               {linkedin}
@@ -103,7 +110,9 @@ const NavBar = () => {
               {instagram}
             </div>
             <button className="bg-yellow-120 w-full h-full flex justify-center items-center p-3">
-              <p className="text-md font-medium ">Contact Us</p>
+              <p className="text-md font-medium ">
+                {ar ? "تواصل معنا" : "Contact Us"}
+              </p>
             </button>
           </div>
         </div>
