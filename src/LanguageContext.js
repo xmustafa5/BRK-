@@ -1,15 +1,25 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState } from "react";
 
 const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState('ar');
+  const [language, setLanguage] = useState("ar");
   const toggleLanguage = () => {
-    setLanguage(language === 'en' ? 'ar' : 'en');
+    setLanguage(language === "en" ? "ar" : "en");
   };
 
   return (
-    <LanguageContext.Provider value={{ language, toggleLanguage , ar:language === 'ar',en:language === 'en' , light: language === 'en' ? 'light' : 'lightAr' }}>
+    <LanguageContext.Provider
+      value={{
+        language,
+        toggleLanguage,
+        ar: language === "ar",
+        en: language === "en",
+        light: language === "en" ? "light" : "lightAr",
+        medium: language === "en" ? "Medium" : "mediumAr",
+        bold: language === "en" ? "Extrabold" : "boldAr",
+      }}
+    >
       {children}
     </LanguageContext.Provider>
   );
