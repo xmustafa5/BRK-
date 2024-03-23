@@ -9,13 +9,18 @@ import LanguageContext from "../LanguageContext";
 
 const NavBar = () => {
   const [IsMenuOpened, setIsMenuOpened] = useState(false);
-  const { language, toggleLanguage,ar,en ,light} = useContext(LanguageContext);
+  const { language, toggleLanguage, ar, en, light } =
+    useContext(LanguageContext);
   function toggleMenu() {
     setIsMenuOpened((prev) => !prev);
   }
 
   return (
-    <header className={`bg-blue-120 ${ar &&  'rtl'} h-[80px] flex flex-col justify-center items-center`}>
+    <header
+      className={`bg-blue-120 ${
+        ar && "rtl"
+      } h-[80px] flex flex-col justify-center items-center`}
+    >
       <div className="container relative flex justify-between  items-center">
         <div className="flex gap-3 w-[200px] sm:w-[300px]">
           {logo} {logoText}
@@ -23,13 +28,13 @@ const NavBar = () => {
         <div className="lg:hidden" onClick={toggleMenu}>
           <img src={burgerMenuIcon} alt="More" />
         </div>
-        <button onClick={toggleLanguage}>{ar ? 'انكليزي' : 'arabic'}</button>
+        <button onClick={toggleLanguage}>{ar ? "انكليزي" : "arabic"}</button>
         <div className="hidden justify-center items-center gap-4 lg:flex">
           <div className="flex justify-center items-center gap-4">
             {Emails}
             <div className={`text-white light text-md`}>
               <Link href="">
-                <p>{ar ? 'البريد الالكتروني':'Email'}</p>
+                <p>{ar ? "البريد الالكتروني" : "Email"}</p>
                 <p>contact@brk-iq.com</p>
               </Link>
             </div>
@@ -37,8 +42,8 @@ const NavBar = () => {
           <div className={`flex justify-center ${light} items-center gap-4`}>
             {Phones}
             <div className="text-white text-md">
-              <p>{ar ? 'اتصل بنا' :'Call Us'  }</p>
-              <p>{ar? '+964 (771) 333-9999' :  '+964 (771) 333-9999'}</p>
+              <p>{ar ? "اتصل بنا" : "Call Us"}</p>
+              <p>{ar ? "٩٦٤٧٧١٩٩٩٩٣٣+" : "+964 (771) 333-9999"}</p>
             </div>
           </div>
         </div>
