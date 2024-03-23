@@ -11,7 +11,7 @@ export default function OurDistributors() {
     <div className={rtl}>
         <Distributors ar={ar}/>
         <MainDistributors ar={ar}/>
-        <Congrat />
+        <Congrat ar={ar}/>
     </div>
   )
 }

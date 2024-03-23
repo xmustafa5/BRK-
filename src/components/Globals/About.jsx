@@ -7,7 +7,7 @@ import SubTitle from "../ui/SubTitle";
 import Button from "../ui/Button";
 import SectionTitle from "../ui/Section-title";
 
-export default function About({ includeVision }) {
+export default function About({ includeVision ,ar}) {
   return (
     <section id="about" className="py-10 lg:py-0">
       <div className="container min-h-[85vh] gap-8 flex flex-col-reverse lg:flex-row lg:items-center lg:justify-center">
