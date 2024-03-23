@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import LanguageContext from "../../LanguageContext";
 import imgo from "../../assets/img/media/Photo.png";
 import LightLabel from "../ui/LightLabel";
 import MainHugeTitle from "../ui/MainHugeTitle";
@@ -41,13 +43,14 @@ function MediaPage() {
       img: imgo,
     },
   ];
-
+  const { language, toggleLanguage, ar, en, light, rtl } =
+    useContext(LanguageContext);
   return (
-    <>
+    <div className={rtl}>
       <div className="!h-[60vh] home ">
         <div className="container flex justify-center gap-5 items-start flex-col ">
-          <LightLabel title="Industrial Investment" />
-          <MainHugeTitle title="Media" />
+          <LightLabel title={ar? 'الاستثمار الصناعي' :"Industrial Investment"} />
+          <MainHugeTitle title={ar? 'الوسائط' :"Media"} />
         </div>
       </div>
       <div className="responsive-grid gap-5 w-[70%] mx-auto py-40">
@@ -73,7 +76,7 @@ function MediaPage() {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 }
 

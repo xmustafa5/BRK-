@@ -1,11 +1,11 @@
 import React from "react";
 import Paragraph from "../ui/Paragraph";
-import {  searchInput } from "../../assets/svg/Distributors";
+import { searchInput } from "../../assets/svg/Distributors";
 import SingleDistributors from "./SingleDistributors";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
-export default function MainDistributors() {
+export default function MainDistributors({ ar }) {
   async function getDistributors() {
     const res = await axios.get(
       `${process.env.REACT_APP_API_URL}api/v1/distributors`
@@ -23,7 +23,13 @@ export default function MainDistributors() {
       <div className="flex gap-4 w-full justify-center item-center">
         <div className="left  h-screen  pt-2  ">
           <div className="py-3 flex justify-start">
-            <Paragraph p="Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition." />
+            <Paragraph
+              p={
+                ar
+                  ? "استفد من أطر العمل الرشيقة لتوفير ملخص قوي للاستراتيجية التي تعزز التفكير التعاوني لتعزيز عرض القيمة الشاملة."
+                  : "Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition."
+              }
+            />
           </div>
           <div class="map-responsive  ">
             <iframe
@@ -49,7 +55,7 @@ export default function MainDistributors() {
           </div>
           <div className=" h-screen  overflow-y-scroll  pb-14 scroll">
             {data?.map((item, index) => (
-              <SingleDistributors item={item} />
+              <SingleDistributors item={item} ar={ar} />
             ))}
           </div>
         </div>

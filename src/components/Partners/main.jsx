@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "./card";
-const MainPartners = () => {
+const MainPartners = ({ar}) => {
   return (
     <div className="responsive-grid py-10">
       <Card />

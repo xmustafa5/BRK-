@@ -12,11 +12,11 @@ export default function AboutPage() {
   return (
     <div className={rtl}>
       <Landing ar={ar} />
-      <About />
-      <CompanyValues />
-      <OurVision />
-      <CompanyObjectives />
-      <Distributions />
+      <About ar={ar}/>
+      <CompanyValues ar={ar} />
+      <OurVision ar={ar}/>
+      <CompanyObjectives ar={ar} />
+      <Distributions ar={ar}/>
     </div>
   );
 }

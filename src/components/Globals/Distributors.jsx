@@ -13,7 +13,7 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-export default function Distributions() {
+export default function Distributions({ar}) {
   async function getDistributors() {
     const res = await axios.get(
       `${process.env.REACT_APP_API_URL}api/v1/distributors`
@@ -31,9 +31,9 @@ export default function Distributions() {
       className="flex justify-center items-center flex-col h-[60vh] gap-6"
     >
       <div className="bg-gray-200 flex  ">
-        <LightLabel title="distributors" />
+        <LightLabel title={ar? 'الموزعين' :"distributors"} />
       </div>
-      <SectionTitle title="Our Distributors" />
+      <SectionTitle title={ar? 'الموزعين لدينا' :"Our Distributors"} />
 
       <div className="w-full h-full flex justify-center items-center">
         <Swiper

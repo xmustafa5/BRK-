@@ -6,6 +6,7 @@ import PartnerIndex from "./components/Partners/partnerIndex";
 
 import OurDistributors from "./components/Our-distributors";
 import MediaPage from "./components/Media";
+import ContactUs from "./components/contact-us";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/partners" element={<PartnerIndex />} />
         <Route path="/our-distributors" element={<OurDistributors />} />
         <Route path="/media" element={<MediaPage />} />
+        <Route path="/contact" element={<ContactUs />} />
       </Routes>
     </>
   );
