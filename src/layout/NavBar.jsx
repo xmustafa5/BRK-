@@ -43,6 +43,7 @@ const NavBar = () => {
             {Phones}
             <div className="text-white text-md">
               <p>{ar ? "اتصل بنا" : "Call Us"}</p>
+
               <p>{ar ? "٩٦٤٧٧١٩٩٩٩٣٣+" : "+964 (771) 333-9999"}</p>
             </div>
           </div>
@@ -64,43 +65,45 @@ const NavBar = () => {
             }`}
           >
             <li className="text-white text-lg">
-              <Link to="/">Home</Link>
+              <Link to="/">{ar ? "الرئيسية" : "Home"}</Link>
             </li>
             <span className="text-white text-opacity-60 hidden md:inline">
               |
             </span>
             <li className="text-white text-lg">
-              <Link to="aboutus">About</Link>
+              <Link to="aboutus">{ar ? "من نحن" : "About"}</Link>
             </li>
             <span className="text-white text-opacity-60 hidden md:inline">
               |
             </span>
             <li className="text-white text-lg">
-              <a href="#Products">Products</a>
+              <a href="#Products">{ar ? "المنتجات" : "Products"}</a>
             </li>
             <span className="text-white text-opacity-60 hidden md:inline">
               |
             </span>
             <li className="text-white text-lg">
-              <Link to="partners">Partners</Link>
+              <Link to="partners">{ar ? "الشركاء" : "Partners"}</Link>
             </li>
             <span className="text-white text-opacity-60 hidden md:inline">
               |
             </span>
             <li className="text-white text-lg">
-              <Link to="our-distributors">Distributions</Link>
+              <Link to="our-distributors">
+                {ar ? "الموزعين" : "Distributions"}
+              </Link>
             </li>
             <span className="text-white text-opacity-60 hidden md:inline">
               |
             </span>
             <li className="text-white text-lg">
-              <Link to="media">Media</Link>
+              <Link to="media">{ar ? "الوسائط" : `Media`}</Link>
             </li>
           </ul>
           <div
             className={`flex gap-4 h-full justify-center items-center ${
-              IsMenuOpened ? "absolute left-4" : ""
-            }`}
+              ar && "ltr"
+            } ${IsMenuOpened ? "absolute left-4" : ""}`}
           >
             <div className="flex gap-4">
               {linkedin}
@@ -108,7 +111,9 @@ const NavBar = () => {
               {instagram}
             </div>
             <button className="bg-yellow-120 w-full h-full flex justify-center items-center p-3">
-              <p className="text-md font-medium ">Contact Us</p>
+              <p className="text-md font-medium ">
+                {ar ? "تواصل معنا" : "Contact Us"}
+              </p>
             </button>
           </div>
         </div>
