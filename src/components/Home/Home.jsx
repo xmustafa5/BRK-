@@ -5,10 +5,7 @@ import MainHugeTitle from "../ui/MainHugeTitle";
 import { useContext, useState } from "react";
 import LanguageContext from "../../LanguageContext.js";
 
-export default function Home() {
-  const { language, toggleLanguage, ar, en, light } =
-    useContext(LanguageContext);
-
+export default function Home({ ar }) {
   return (
     <section className="home relative">
       <div className="flex container w-full items-center text-center sm:text-left">
@@ -16,14 +13,19 @@ export default function Home() {
           <MainLabel
             title={ar ? "الاستثمار الصناعي" : "Industrial Investment"}
           />
-          <MainHugeTitle title="Your Supportive" haveSpan={true} />
+          <MainHugeTitle
+            title={ar ? "شريكك" : "Your Supportive"}
+            haveSpan={true}
+          />
           <Paragraph
             main={true}
-            p="In augue ligula, feugiat ut nulla consequat. Ut est lacus, molestie in
-      arcu no, iaculis vehicula ipsum. Nunc faucibus, nisl id dapibus finibus,
-      enim diam interdum nulla, sed laoreet risus lectus."
+            p={
+              ar
+                ? "تضع شركة البركة للاستثمارات الصناعية نصب عينيها النهوض بقطاع الصناعة في العراق، وأن تمضي قدماً نحو أهدافها في التوسع داخل العراق وخارجه."
+                : "In augue ligula, feugiat ut nulla consequat. Ut est lacus, molestie inarcu no, iaculis vehicula ipsum. Nunc faucibus, nisl id dapibus finibus, enim diam interdum nulla, sed laoreet risus lectus"
+            }
           />
-          <Button title="About Us" />
+          <Button title={ar ? "من نحن" : "About Us"} />
         </div>
       </div>
     </section>

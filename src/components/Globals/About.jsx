@@ -7,7 +7,7 @@ import SubTitle from "../ui/SubTitle";
 import Button from "../ui/Button";
 import SectionTitle from "../ui/Section-title";
 
-export default function About({ includeVision,ar }) {
+export default function About({ includeVision }) {
   return (
     <section id="about" className="py-10 lg:py-0">
       <div className="container min-h-[85vh] gap-8 flex flex-col-reverse lg:flex-row lg:items-center lg:justify-center">
@@ -26,8 +26,8 @@ export default function About({ includeVision,ar }) {
           </div>
         </div>
         <div className="flex flex-col justify-center items-center gap-4 text-center lg:items-start lg:text-start">
-          <LightLabel title={ar ? 'نبذة عن الشركة' :"Company overview"} />
-          <SectionTitle title={ar ? 'من نحن' :"About Us"} />
+          <LightLabel title={ar ? "نبذة عن الشركة" : "Company overview"} />
+          <SectionTitle title={ar ? "من نحن" : "About Us"} />
           <Paragraph
             main={false}
             p="Leverage agile frameworks to provide a robust synopsis for strategy
@@ -36,10 +36,12 @@ export default function About({ includeVision,ar }) {
           />
           <Paragraph
             main={false}
-            p={ar ? 'بدأت شركة البركة للاستثمارات الصناعية أعمالها في عام 1995، متخصصة في صناعة الأنابيب البلاستيكية في السوق العراقي، ومنطلقة من حاجة السوق المحلي لصناعة الأنابيب. ورغم التحديات التي واجهتها الشركة من شحة المواد الأولية، والانغلاق على الأسواق الخارجية، لكنها عملت على تجاوز العقبات، فقام المؤسسون بتجميع أول ماكنة باستخدام المواد المتوفرة وقتها. فأثمر العمل عن أول خط لإنتاج الأنابيب البلاستيكية التي خرج بها مصنع الشركة. بجودة تناسب السوق، وسعر يناسب القدرات الشرائية آنذاك. ' 
-            :
-            "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem quia voluptassit."}
-/>
+            p={
+              ar
+                ? "بدأت شركة البركة للاستثمارات الصناعية أعمالها في عام 1995، متخصصة في صناعة الأنابيب البلاستيكية في السوق العراقي، ومنطلقة من حاجة السوق المحلي لصناعة الأنابيب. ورغم التحديات التي واجهتها الشركة من شحة المواد الأولية، والانغلاق على الأسواق الخارجية، لكنها عملت على تجاوز العقبات، فقام المؤسسون بتجميع أول ماكنة باستخدام المواد المتوفرة وقتها. فأثمر العمل عن أول خط لإنتاج الأنابيب البلاستيكية التي خرج بها مصنع الشركة. بجودة تناسب السوق، وسعر يناسب القدرات الشرائية آنذاك. "
+                : "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem quia voluptassit."
+            }
+          />
           {includeVision ? (
             <>
               <h4 className="text-black-120 bold text-[16px]">Vision</h4>
