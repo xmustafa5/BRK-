@@ -244,3 +244,6 @@ code {
 .responsive-grid img{
   width: 100%;
 }
+.rtl{
+  direction: rtl;
+}

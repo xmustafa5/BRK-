@@ -4,24 +4,26 @@ import { Emails, Phones } from "../assets/svg/contact";
 import { facebook, instagram, linkedin } from "../assets/svg/socialMedia";
 
 import burgerMenuIcon from "../assets/menu.svg";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import LanguageContext from "../LanguageContext";
 
 const NavBar = () => {
   const [IsMenuOpened, setIsMenuOpened] = useState(false);
-
+  const { language, toggleLanguage,ar,en } = useContext(LanguageContext);
   function toggleMenu() {
     setIsMenuOpened((prev) => !prev);
   }
 
   return (
-    <header className="bg-blue-120 h-[80px] flex flex-col justify-center items-center">
-      <div className="container relative flex justify-between items-center">
+    <header className={`bg-blue-120 ${ar &&  'rtl'} h-[80px] flex flex-col justify-center items-center`}>
+      <div className="container relative flex justify-between  items-center">
         <div className="flex gap-3 w-[200px] sm:w-[300px]">
           {logo} {logoText}
         </div>
         <div className="lg:hidden" onClick={toggleMenu}>
           <img src={burgerMenuIcon} alt="More" />
         </div>
+        <button onClick={toggleLanguage}>{ar ? 'انكليزي' : 'arabic'}</button>
         <div className="hidden justify-center items-center gap-4 lg:flex">
           <div className="flex justify-center items-center gap-4">
             {Emails}
