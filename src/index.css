@@ -142,6 +142,39 @@ code {
     url("../src/assets/fonts/NeurialGrotesk-Regular.otf") format("truetype");
 }
 
+/* font arabic */
+
+@font-face {
+  font-family: "lightAr";
+  src: local("arabicd"),
+    url("../src/assets/fonts/arFont/ARBFONTS-GE_SS_TWO_LIGHT-1.OTF")
+      format("truetype");
+}
+
+@font-face {
+  font-family: "mediumAr";
+  src: local("arabicd"),
+    url("../src/assets/fonts/arFont/ARBFONTS-GE_SS_TWO_MEDIUM-1.OTF")
+      format("truetype");
+}
+
+@font-face {
+  font-family: "boldAr";
+  src: local("arabicd"),
+    url("../src/assets/fonts/arFont/ARBFONTS-GE_SS_TWO_BOLD-1.OTF")
+      format("truetype");
+}
+
+.lightAr {
+  font-family: lightAr;
+}
+.mediumAr {
+  font-family: mediumAr;
+}
+.boldAr {
+  font-family: boldAr;
+}
+
 .map-responsive {
   overflow: hidden;
   padding-bottom: 56.25%;
@@ -241,10 +274,10 @@ code {
   gap: 40px;
 }
 
-.responsive-grid img{
+.responsive-grid img {
   width: 100%;
 }
-.rtl{
+.rtl {
   direction: rtl;
 }
 .ltr{

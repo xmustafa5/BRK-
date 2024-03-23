@@ -15,8 +15,10 @@ export const LanguageProvider = ({ children }) => {
         toggleLanguage,
         ar: language === "ar",
         en: language === "en",
+        rtl: language === "ar" && "rtl" ,
         light: language === "en" ? "light" : "lightAr",
-        rtl: language === "ar" && "rtl" 
+        medium: language === "en" ? "Medium" : "mediumAr",
+        bold: language === "en" ? "Extrabold" : "boldAr",
       }}
     >
       {children}

@@ -43,7 +43,8 @@ const NavBar = () => {
             {Phones}
             <div className="text-white text-md">
               <p>{ar ? "اتصل بنا" : "Call Us"}</p>
-              <p>{ar ? "+964 (771) 333-9999" : "+964 (771) 333-9999"}</p>
+
+              <p>{ar ? "٩٦٤٧٧١٩٩٩٩٣٣+" : "+964 (771) 333-9999"}</p>
             </div>
           </div>
         </div>
