@@ -25,10 +25,11 @@ const NavBar = () => {
         <div className="flex gap-3 w-[200px] sm:w-[300px]">
           {logo} {logoText}
         </div>
+
         <div className="lg:hidden" onClick={toggleMenu}>
           <img src={burgerMenuIcon} alt="More" />
         </div>
-        <button onClick={toggleLanguage}>{ar ? "انكليزي" : "arabic"}</button>
+
         <div className="hidden justify-center items-center gap-4 lg:flex">
           <div className="flex justify-center items-center gap-4">
             {Emails}
@@ -39,6 +40,7 @@ const NavBar = () => {
               </Link>
             </div>
           </div>
+
           <div className={`flex justify-center ${light} items-center gap-4`}>
             {Phones}
             <div className="text-white text-md">
@@ -46,6 +48,12 @@ const NavBar = () => {
 
               <p>{ar ? "٩٦٤٧٧١٩٩٩٩٣٣+" : "+964 (771) 333-9999"}</p>
             </div>
+            <button
+              onClick={toggleLanguage}
+              className="text-white w-16 h-10 Regular bg-gray-800 rounded-md"
+            >
+              {ar ? "English" : "العربية"}
+            </button>
           </div>
         </div>
       </div>

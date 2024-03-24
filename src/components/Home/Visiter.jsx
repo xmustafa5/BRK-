@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Visiter() {
+export default function Visiter({ ar }) {
   return (
     <section className="py-10">
       <div className="container flex justify-center border-gray-400 flex-col gap-8 md:flex-row md:h-24 m-auto">
@@ -11,8 +11,10 @@ export default function Visiter() {
               .
             </div>
             <div>
-              <p className="text-[#1C1F35] text-lg light">Certificated</p>
-              <p className="text-[#1C1F35] light">Product</p>
+              <p className="text-[#1C1F35] text-lg light">
+                {ar ? "منتج " : "Certificated"}
+              </p>
+              <p className="text-[#1C1F35] light">{ar ? "مصنع" : "Product"}</p>
             </div>
           </div>
         </div>
@@ -23,8 +25,12 @@ export default function Visiter() {
               .
             </div>
             <div>
-              <p className="text-[#1C1F35] text-lg light">Provinces</p>
-              <p className="text-[#1C1F35] light text-lg">Across All Iraq</p>
+              <p className="text-[#1C1F35] text-lg light">
+                {ar ? "موزع" : "Provinces"}
+              </p>
+              <p className="text-[#1C1F35] light text-lg">
+                {ar ? "حول العراق" : "Across All Iraq"}
+              </p>
             </div>
           </div>
         </div>
