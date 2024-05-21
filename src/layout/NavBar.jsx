@@ -85,7 +85,7 @@ const NavBar = () => {
               |
             </span>
             <li className="text-white text-lg">
-              <a href="#Products">{ar ? "المنتجات" : "Products"}</a>
+              <Link to="products">{ar ? "المنتجات" : "Products"}</Link>
             </li>
             <span className="text-white text-opacity-60 hidden md:inline">
               |
@@ -118,11 +118,14 @@ const NavBar = () => {
               {facebook}
               {instagram}
             </div>
+            <Link to='contact' >
             <button className="bg-yellow-120 w-full h-full flex justify-center items-center p-3">
               <p className="text-md font-medium ">
                 {ar ? "تواصل معنا" : "Contact Us"}
               </p>
             </button>
+            </Link>
+          
           </div>
         </div>
       </nav>

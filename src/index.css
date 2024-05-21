@@ -287,3 +287,30 @@ code {
 .ltr {
   direction: ltr;
 }
+/* single product page  */
+.product-container{
+  grid-template-columns:1fr 1fr 1fr ;
+}
+
+@media (max-width:900px){
+  .product-container{
+    grid-template-columns: 1fr ;
+    padding: 2.25rem;
+  }
+  .details-container {
+padding: 2.5rem;
+  }
+}
+.details-container h1{
+width: fit-content;
+}
+
+/* form style */
+.input-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+}
+.input-grid textarea{
+  grid-column: 1 /-1;
+}
