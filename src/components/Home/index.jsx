@@ -12,15 +12,15 @@ export default function HomePage() {
   const { language, toggleLanguage, ar, en, light, rtl } =
     useContext(LanguageContext);
   return (
-    <div className="rtl">
+    <div className={rtl}>
       <Home ar={ar} />
       <About includeVision={true} ar={ar} />
-      <Products />
-      <WhyUs />
-      <Visiter />
-      <Partners />
+      <Products ar={ar} />
+      <WhyUs ar={ar} />
+      <Visiter ar={ar} />
+      <Partners ar={ar} />
       <Congrat ar={ar} />
-      <Distributors />
+      <Distributors ar={ar} />
     </div>
   );
 }

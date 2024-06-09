@@ -1,109 +1,113 @@
+import { Link } from "react-router-dom";
 import { logo, logoText } from "../assets/svg";
 import { Emails, Phones } from "../assets/svg/contact";
 import { facebook, instagram, linkedin } from "../assets/svg/socialMedia";
+import LanguageContext from "../LanguageContext";
+import { useContext } from "react";
+import  Button from '../components/ui/Button'
 
 const Footer = () => {
-  return (
-    <footer className="h-full bg-blue-120">
-      <div className="imageBgFooter h-[12vh] w-full md:h-[50vh]">image</div>
-      <div className="container flex flex-col h-full items-center gap-4 w-full ">
-        <div className="flex h-full w-full">
-          <div className="hidden w-[14vw] h-full md:block">
-            <div className="text-[#1C2551] bg-[#1C2551] h-20">.</div>
-            <div className="bg-blue-120 w-full h-full">.</div>
-          </div>
-          <div className="flex flex-col h-full bg-blue-120 w-full">
-            <div className="flex gap-3 h-20 p-2 items-center max-w-[200px]">
-              {logo} {logoText}
-            </div>
-            <p className="hidden p-2 bg-[#] text-[16px] text-white md:block">
-              Leverage agile frameworks to provide a robust synopsis for
-              strategy foster collaborative thinking to further the overall
-              value proposition.
-            </p>
-            <div className="flex items-center gap-4 flex-wrap">
-              <div className="flex justify-center items-center gap-4">
-                {Emails}
-                <div className="text-white light text-md">
-                  <p>Email</p>
-                  <p className=" whitespace-nowrap">contact@brk-iq.com</p>
-                </div>
-              </div>
-              <div className="flex justify-center light items-center gap-4">
-                {Phones}
-                <div className="text-white text-md">
-                  <p>Call us</p>
-                  <p>+964 (771) 333-9999</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="hidden bg-[#1D2551] h-full  flex-col w-[13vw] justify-center items-start ">
-            <h2 className="text-lg font-bold p-4 Regular text-white h-20 flex justify-start items-center bg-[#1C2551]">
-              pages
-            </h2>
-            <div className="flex flex-col w-full h-full  p-4 text-white gap-3 bg-blue-120 justify-center items-start">
-              <p>About Us</p>
-              <p>Our Project</p>
-              <p>Products</p>
-              <p>Vendors</p>
-              <p>Contact</p>
-            </div>
-          </div>
-          <div className="hidden bg-[#1D2551] h-full flex-col w-[13vw] justify-center items-start md:flex">
-            <h2 className="text-lg font-bold p-4 Regular text-white h-20 flex justify-start items-center bg-[#1C2551]">
-              About Us
-            </h2>
-            <div className="flex flex-col w-full h-full  p-4 text-white gap-3 bg-blue-120 justify-center items-start">
-              <p>Profile</p>
-              <p>Vision</p>
-              <p>Mission</p>
-              <p>Timeline</p>
-              <p>ISOs</p>
-              <p>Careers</p>
-            </div>
-          </div>
+  const { language, toggleLanguage, ar, en, light, rtl } =
+    useContext(LanguageContext);
 
-          <div className="hidden bg-[#1D2551] h-full w-[19vw] justify-center flex-col items-start md:flex">
-            <h2 className="text-lg font-bold p-4 Regular h-20 bg-[#1C2551] flex flex-col items-center justify-center text-white">
-              Subscribe
-            </h2>
-            <div className="flex flex-col p-4 gap-3 bg-blue-120 w-full">
-              <input
-                type="text"
-                className="h-14 bg-blue-120 border border-gray-120 placeholder:outline-none placeholder:text-lg placeholder:pl-2"
-                placeholder="Email Here*"
-              />
-              <div className="flex h-full justify-start  items-center gap-2 ">
-                <div className=" flex justify-center items-center relative whitespace-nowrap bg-yellow-120 w-fit px-8 py-2 h-full  rounded-[0px]">
-                  <button>Send Now</button>
-                  <div className="flex  absolute left-36  gap-3  justify-center items-center  ">
-                    {linkedin}
-                    {facebook}
-                    {instagram}
-                  </div>
-                </div>
+  return (
+    <footer className={`${ar ? "lightAr" : "light"} ${rtl} h-full w-full bg-blue-120`}>
+      <div className="imageBgFooter h-[12vh] w-full md:h-[50vh]"></div>
+
+      <div className="grid grid-cols-1 md:grid-cols-4 h-full w-full  container mx-auto ">
+        <div className="flex flex-col items-start gap-7 col-span-1 md:col-span-1">
+          <div className="flex gap-3 h-20 p-2 items-center max-w-[200px]">
+            {logo} {logoText}
+          </div>
+          <p className="p-2 text-[16px] text-white">
+            {ar
+              ? "نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي"
+              : "Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition."}
+          </p>
+          <div className="flex flex-col gap-4">
+            <div className="flex justify-center items-center gap-4">
+              {Emails}
+              <div className="text-white text-md">
+                <p>{ar ? "البريد الالكتروني " : "Email"}</p>
+                <p className="whitespace-nowrap">contact@brk-iq.com</p>
               </div>
             </div>
-          </div>
-          <div className="hidden w-[15vw] h-full md:block">
-            <div className="text-[#1C2551] bg-[#1C2551] h-20">.</div>
-            <div className="bg-blue-120 w-full h-full">.</div>
+            <div className="flex justify-center items-center gap-4">
+              {Phones}
+              <div className="text-white text-md">
+                <p>{ar ? " اتصل بنا " : "Call us"}</p>
+                <p>+964 (771) 333-9999</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="border-t border-gray-400 w-full flex justify-center item-center gap-10 p-2">
-          <h3 className="text-white">
-            Copyrights 2024 © BRK Al-Baraka Company
-          </h3>
-          <div className="hidden text-[#8388A7] text-md md:flex">
-            <p>Privacy</p>
-            <p>terms and Conditions of Sale</p>
-            <p>Website Terms of Use</p>
-            <p>Sitemap</p>
+
+        <nav className="col-span-1 md:col-span-1">
+          <h2 className="text-lg font-bold p-4 text-white bg-[#1C2551]">
+            {ar ? "الصفحات " : "Pages"}
+          </h2>
+          <ul className="flex flex-col gap-3 p-4 text-white bg-blue-120">
+            <li><Link to="aboutus">{ar ? "من نحن" : "About Us"}</Link></li>
+            <li><Link to="/">{ar ? " مشاريعنا" : "Our Project"}</Link></li>
+            <li><Link to="products">{ar ? " منتجاتنا" : "Products"}</Link></li>
+            <li><Link to="/">{ar ? " وكلائنا" : "Vendors"}</Link></li>
+            <li><Link to="contact">{ar ? " تواصل معنا" : "Contact"}</Link></li>
+          </ul>
+        </nav>
+
+        <nav className="col-span-1 md:col-span-1">
+          <h2 className="text-lg font-bold p-4 text-white bg-[#1C2551]">
+            {ar ? "من نحن" : "About Us"}
+          </h2>
+          <ul className="flex flex-col gap-3 p-4 text-white bg-blue-120">
+            <li><Link to="/">{ar ? "الملف التعريفي " : "Profile"}</Link></li>
+            <li><Link to="/">{ar ? " الرؤية" : "Vision"}</Link></li>
+            <li><Link to="/">{ar ? "المهام " : "Mission"}</Link></li>
+            <li><Link to="/">{ar ? "الجدول الزمني " : "Timeline"}</Link></li>
+            <li><Link to="/">{ar ? " شهادات الجودة" : "ISOs"}</Link></li>
+            <li><Link to="/">{ar ? "وظائف " : "Careers"}</Link></li>
+          </ul>
+        </nav>
+
+        <div className="col-span-1 md:col-span-1">
+          <h2 className="text-lg font-bold p-4 text-white bg-[#1C2551]">
+            {ar ? "اشتراك " : "Subscribe"}
+          </h2>
+          <div className="flex flex-col p-4 gap-3 bg-blue-120">
+            <input
+              type="text"
+              className="h-14 bg-blue-120 border border-gray-120 placeholder:outline-none placeholder:text-lg placeholder:px-2"
+              placeholder={ar ? "هنا البريد الالكتروني*" : "  Email Here*"}
+            />
+            <div className="flex justify-start items-center gap-2">
+              <div className="relative flex justify-start gap-10 items-center whitespace-nowrap   py-2 rounded-[0px]">
+                <Button title={ar ? "ارسل الآن " : "Send Now"} />
+                <div className="flex  gap-3">
+                  {linkedin}
+                  {facebook}
+                  {instagram}
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+      </div>
+
+      <div className="border-t border-gray-700 w-full"></div>
+      
+      <div className="w-full flex justify-center items-center gap-24 p-2">
+        <h3 className="text-white">
+          {ar ? " جميع الحقوق محفوظة © 2024 BRK Al-Baraka Company " : "Copyrights 2024 © BRK Al-Baraka Company"}
+        </h3>
+        <div className="hidden md:flex text-[#8388A7] text-md gap-8">
+          <p>{ar ? "سياسة الخصوصية " : "Privacy"}</p>
+          <p>{ar ? " شروط وقواعد البيع " : "Terms and Conditions of Sale"}</p>
+          <p>{ar ? " شروط الاستخدام " : "Website Terms of Use"}</p>
+          <p>{ar ? " خارطة الموقع " : "Sitemap"}</p>
         </div>
       </div>
     </footer>
   );
 };
+
 export default Footer;

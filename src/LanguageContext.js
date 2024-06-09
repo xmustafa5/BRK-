@@ -5,6 +5,8 @@ const LanguageContext = createContext();
 export const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useState("ar");
   const toggleLanguage = () => {
+    const pageLang = document.documentElement.lang
+    document.documentElement.lang = pageLang === "ar" ? "en" : "ar"
     setLanguage(language === "en" ? "ar" : "en");
   };
 

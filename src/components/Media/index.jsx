@@ -10,36 +10,42 @@ function MediaPage() {
       date: "2021-07-20",
       title:
         "BRK is now the official distributor of the world's leading brands in Iraq",
+      titleAr: "مشروع بدور         بغداد         التصميم الداخلي",
       img: imgo,
     },
     {
       date: "2021-07-20",
       title:
         "BRK is now the official distributor of the world's leading brands in Iraq",
+      titleAr: "مشروع بدور         بغداد         التصميم الداخلي",
       img: imgo,
     },
     {
       date: "2021-07-20",
       title:
         "BRK is now the official distributor of the world's leading brands in Iraq",
+      titleAr: "مشروع بدور         بغداد         التصميم الداخلي",
       img: imgo,
     },
     {
       date: "2021-07-20",
       title:
         "BRK is now the official distributor of the world's leading brands in Iraq",
+      titleAr: "مشروع بدور         بغداد         التصميم الداخلي",
       img: imgo,
     },
     {
       date: "2021-07-20",
       title:
         "BRK is now the official distributor of the world's leading brands in Iraq",
+      titleAr: "مشروع بدور         بغداد         التصميم الداخلي",
       img: imgo,
     },
     {
       date: "2021-07-20",
       title:
         "BRK is now the official distributor of the world's leading brands in Iraq",
+      titleAr: "مشروع بدور         بغداد         التصميم الداخلي",
       img: imgo,
     },
   ];
@@ -49,29 +55,36 @@ function MediaPage() {
     <div className={rtl}>
       <div className="!h-[60vh] home ">
         <div className="container flex justify-center gap-5 items-start flex-col ">
-          <LightLabel title={ar? 'الاستثمار الصناعي' :"Industrial Investment"} />
-          <MainHugeTitle title={ar? 'الوسائط' :"Media"} />
+          <LightLabel
+            title={ar ? "الاستثمار الصناعي" : "Industrial Investment"}
+          />
+          <MainHugeTitle title={ar ? "الوسائط" : "Media"} />
         </div>
       </div>
-      <div className="responsive-grid gap-5 w-[70%] mx-auto py-40">
+      <div className=" grid grid-cols-2 gap-5 w-[70%] mx-auto py-40">
         {data.map((item, index) => (
-          <div className="  responsive-grid bg-[#EEF0F8]" key={index}>
+          <div className="  flex w-full  bg-[#EEF0F8]" key={index}>
             {index % 4 < 2 ? (
-              <>
-                <img src={imgo} alt="imageo" className="block" />
-                <div className="flex flex-col justify-between p-5">
+              <div className="flex w-full">
+              <div className=" w-1/2 ">
+                <img src={imgo} alt="imageo" className="block w-full object-cover"  />
+              </div>
+                <div className="flex w-1/2  flex-col justify-between p-5">
                   <span className="text-gray-120">{item.date}</span>
-                  <h3 className="text-[26px] text-black-120">{item.title}</h3>
+                  <h3 className="text-[26px] bold boldAr text-black-120">{ar ? item?.titleAr : item.title}</h3>
                 </div>
-              </>
+              </div>
             ) : (
-              <>
-                <div className="flex flex-col justify-between p-5">
+              <div className="w-full flex">
+                <div className="flex flex-col w-1/2 justify-between p-5">
                   <span className="text-gray-120">{item.date}</span>
-                  <h3 className="text-[26px] text-black-120">{item.title}</h3>
+                  <h3 className="text-[26px]  bold boldAr text-black-120">{ar ? item?.titleAr : item.title}</h3>
                 </div>
-                <img src={imgo} alt="imageo" className="block" />
-              </>
+                <div className=" w-1/2 ">
+
+                <img src={imgo} alt="imageo" className="block w-full object-cover" />
+                </div>
+              </div>
             )}
           </div>
         ))}

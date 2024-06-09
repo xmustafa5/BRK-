@@ -6,7 +6,7 @@ export default function SubTitle({title}) {
       <p className=" font-bold text-yellow-120 flex justify-center items-center bg-yellow-120">
         |
       </p>
-      <p className=" text-[#666] p-2 Medium text-md regular ">
+      <p className=" text-[#666] p-2  mediumAr text-xl regular ">
         {title}
       </p>
     </div>

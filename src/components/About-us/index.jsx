@@ -13,7 +13,10 @@ export default function AboutPage() {
     <div className={rtl}>
       <Landing ar={ar} />
       <About ar={ar}/>
+      <div className="py-8 flex justify-center items-center">
       <CompanyValues ar={ar} />
+        
+      </div>
       <OurVision ar={ar}/>
       <CompanyObjectives ar={ar} />
       <Distributions ar={ar}/>

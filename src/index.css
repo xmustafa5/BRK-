@@ -1,20 +1,105 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+@font-face {
+  font-family: "NeurialGrotesk";
+  font-weight: 300;
+  src: local("NeurialGrotesk"),
+    url("/fonts/NeurialGrotesk-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "NeurialGrotesk";
+  font-weight: 400;
+  src: local("NeurialGrotesk"),
+    url("/fonts/NeurialGrotesk-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "NeurialGrotesk";
+  font-weight: 500;
+  src: local("NeurialGrotesk"),
+    url("/fonts/NeurialGrotesk-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "NeurialGrotesk";
+  font-weight: 700;
+  src: local("NeurialGrotesk"),
+    url("/fonts/NeurialGrotesk-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "arabic";
+  font-weight: 300;
+  src: local("arabic"),
+    url("/fonts/arFont/ARBFONTS-GE_SS_TWO_LIGHT-1.OTF")
+      format("opentype");
+}
+
+@font-face {
+  font-family: "arabic";
+  font-weight: 500;
+  src: local("arabic"),
+    url("/fonts/arFont/ARBFONTS-GE_SS_TWO_MEDIUM-1.OTF")
+      format("opentype");
+}
+
+@font-face {
+  font-family: "arabic";
+  font-weight: 700;
+  src: local("arabic"),
+    url("/fonts/arFont/ARBFONTS-GE_SS_TWO_BOLD-1.OTF")
+      format("opentype");
+}
+
+[lang="en"] {
+  font-family: "NeurialGrotesk";
+
+  .Extrabold {
+    font-weight: 900;
+  }
+  .bold {
+    font-weight: 700;
+  }
+  .light {
+    font-weight: 300;
+  }
+  .Medium {
+    font-weight: 500;
+  }
+  .Regular {
+    font-weight: 400;
+  }
+}
+
+[lang="ar"] {
+  font-family: "arabic";
+  .lightAr {
+    font-weight: 300;
+  }
+  .mediumAr {
+    font-weight: 500;
+  }
+  .boldAr {
+    font-weight: 700;
+  }
+}
+
+* {
+  font-family: inherit;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 html {
   scroll-behavior: smooth;
-}
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }
 
 .navbar-bg {
@@ -60,13 +145,15 @@ code {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.bold {
-  font-family: bold;
-}
+
 
 .text {
   clip-path: polygon(91% 0, 100% 18%, 100% 100%, 0 100%, 0 1%);
 }
+.textAr {
+  clip-path: polygon(0 0, 9% 0, 0% 18%, 0 100%, 100% 100%, 100% 0);
+}
+
 .text:before {
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
@@ -93,86 +180,6 @@ code {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.Extrabold {
-  font-family: Extrabold;
-}
-.Italic {
-  font-family: Italic;
-}
-.light {
-  font-family: light;
-}
-.Medium {
-  font-family: Medium;
-}
-.Regular {
-  font-family: Regular;
-}
-@font-face {
-  font-family: "bold";
-  src: local("NeurialGrotesk"),
-    url("../src/assets/fonts/NeurialGrotesk-Bold.otf") format("truetype");
-}
-@font-face {
-  font-family: "Extrabold";
-  src: local("NeurialGrotesk"),
-    url("../src/assets/fonts/NeurialGrotesk-Extrabold.otf") format("truetype");
-}
-@font-face {
-  font-family: "Italic";
-  src: local("NeurialGrotesk"),
-    url("../src/assets/fonts/NeurialGrotesk-Italic.otf") format("truetype");
-}
-@font-face {
-  font-family: "light";
-  src: local("NeurialGrotesk"),
-    url("../src/assets/fonts/NeurialGrotesk-Light.otf") format("truetype");
-}
-@font-face {
-  font-family: "Medium";
-  src: local("NeurialGrotesk"),
-    url("../src/assets/fonts/NeurialGrotesk-Medium.otf") format("truetype");
-}
-
-@font-face {
-  font-family: "Regular";
-  src: local("NeurialGrotesk"),
-    url("../src/assets/fonts/NeurialGrotesk-Regular.otf") format("truetype");
-}
-
-/* font arabic */
-
-@font-face {
-  font-family: "lightAr";
-  src: local("arabicd"),
-    url("../src/assets/fonts/arFont/ARBFONTS-GE_SS_TWO_LIGHT-1.OTF")
-      format("truetype");
-}
-
-@font-face {
-  font-family: "mediumAr";
-  src: local("arabicd"),
-    url("../src/assets/fonts/arFont/ARBFONTS-GE_SS_TWO_MEDIUM-1.OTF")
-      format("truetype");
-}
-
-@font-face {
-  font-family: "boldAr";
-  src: local("arabicd"),
-    url("../src/assets/fonts/arFont/ARBFONTS-GE_SS_TWO_BOLD-1.OTF")
-      format("truetype");
-}
-
-.lightAr {
-  font-family: lightAr;
-}
-.mediumAr {
-  font-family: mediumAr;
-}
-.boldAr {
-  font-family: boldAr;
 }
 
 .map-responsive {
@@ -204,7 +211,7 @@ code {
 }
 
 .swiper {
-  width: 90%;
+  width: 80%;
   height: 100%;
 }
 
@@ -236,6 +243,7 @@ code {
   justify-content: center !important;
   align-items: center !important;
   color: #5c5c5c !important;
+
   border-radius: 100%;
   padding-right: -180px !important;
   background-image: url("./assets//icons_swiper.png");
@@ -250,6 +258,9 @@ code {
   justify-content: center !important;
   align-items: center !important;
   color: #5c5c5c !important;
+
+  position: absolute;
+  background: red;
   border-radius: 100%;
   margin-left: 190px;
   background-image: url("./assets//icons_swiper2.png");
@@ -280,6 +291,75 @@ code {
 .rtl {
   direction: rtl;
 }
-.ltr{
+.ltr {
   direction: ltr;
+}
+/* single product page  */
+.product-container {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 900px) {
+  .product-container {
+    grid-template-columns: 1fr;
+    padding: 2.25rem;
+  }
+  .details-container {
+    padding: 2.5rem;
+  }
+}
+.details-container h1 {
+  width: fit-content;
+}
+
+/* form style */
+.input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.input-grid textarea {
+  grid-column: 1 /-1;
+}
+@media (max-width: 900px) {
+  .input-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: max-content;
+  }
+}
+
+/* INPUT RANGE STYLE */
+input[type="range"] {
+  height: 25px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+}
+input[type="range"]:focus {
+  outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #3e3e3e;
+  background: #3e3e3e;
+  border-radius: 1px;
+  border: 0px solid #3e3e3e;
+}
+input[type="range"]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 2px solid #3e3e3e;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: #fdfdfd;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7px;
+}
+
+.container-image-product {
+  grid-area: auto;
 }

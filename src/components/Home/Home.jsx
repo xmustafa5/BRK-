@@ -2,8 +2,6 @@ import MainLabel from "../ui/MainLabel";
 import Paragraph from "../ui/Paragraph";
 import Button from "../ui/Button";
 import MainHugeTitle from "../ui/MainHugeTitle";
-import { useContext, useState } from "react";
-import LanguageContext from "../../LanguageContext.js";
 
 export default function Home({ ar }) {
   return (
@@ -14,7 +12,7 @@ export default function Home({ ar }) {
             title={ar ? "الاستثمار الصناعي" : "Industrial Investment"}
           />
           <MainHugeTitle
-            title={ar ? "شريكك" : "Your Supportive"}
+            title={ar ? "sشريكك" : "Your Supportive"}
             haveSpan={true}
           />
           <Paragraph

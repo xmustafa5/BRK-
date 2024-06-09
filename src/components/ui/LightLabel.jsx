@@ -6,7 +6,7 @@ export default function LightLabel({ title }) {
       <p className=" font-bold text-yellow-120 flex justify-center items-center bg-yellow-120">
         |
       </p>
-      <p className="text-md regular text-black-120 font-medium py-1 px-2 uppercase">
+      <p className="text-md boldAr text-black-120 font-medium py-1 px-2 uppercase">
         {title}
       </p>
     </div>
