@@ -7,7 +7,7 @@ import { useContext } from "react";
 import  Button from '../components/ui/Button'
 
 const Footer = () => {
-  const { language, toggleLanguage, ar, en, light, rtl } =
+  const { ar, rtl } =
     useContext(LanguageContext);
 
   return (

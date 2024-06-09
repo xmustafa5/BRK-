@@ -7,9 +7,9 @@ import Partners from "../Globals/Partners";
 import Congrat from "../Globals/Congrat";
 import Distributors from "../Globals/Distributors";
 import LanguageContext from "../../LanguageContext";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 export default function HomePage() {
-  const { language, toggleLanguage, ar, en, light, rtl } =
+  const {  ar, rtl } =
     useContext(LanguageContext);
   return (
     <div className={rtl}>

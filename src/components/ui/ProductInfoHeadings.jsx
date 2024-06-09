@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import LanguageContext from "../../LanguageContext";
 
 const ProductInfoHeadings = ({ children }) => {
-  const { ar, rtl } = useContext(LanguageContext);
+  const { ar} = useContext(LanguageContext);
 
   return (
     <div className="text-left m-3 font-light    ">

@@ -4,7 +4,7 @@ import tubes from "../../assets/img/Product/tubes.png";
 import LanguageContext from "../../LanguageContext";
 
 const MobileProductInfo = () => {
-  const { ar, rtl } = useContext(LanguageContext);
+  const { ar } = useContext(LanguageContext);
 
   return (
     <div className="border border-gray-200 grid grid-cols-2 md:text-2xl   p-2 m-3">
@@ -27,9 +27,9 @@ const MobileProductInfo = () => {
         </div>
         <span className="flex items-center">
           <span className="text-black font-semibold text-lg md:text-2xl">{ar? ' ملف البيانات':'Datasheet: '}</span>
-          <a href="#" target="_blank" className="mx-2">
+          {/* <a href="#" target="_blank" className="mx-2">
             {pdf}
-          </a>
+          </a> */}
         </span>
       </div>
       <div className="pl-2">

@@ -49,7 +49,7 @@ function MediaPage() {
       img: imgo,
     },
   ];
-  const { language, toggleLanguage, ar, en, light, rtl } =
+  const {  ar, rtl } =
     useContext(LanguageContext);
   return (
     <div className={rtl}>

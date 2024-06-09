@@ -3,7 +3,7 @@ import { CiSearch } from "react-icons/ci";
 import LanguageContext from '../../LanguageContext';
 
 const Filters = () => {
-  const { ar, rtl } = useContext(LanguageContext);
+  const { ar} = useContext(LanguageContext);
 
     const brands = ['Georg Fischer' ,'Georg Fischer' , 'Georg Fischer' , 'Georg Fischer' , 'Georg Fischer ' , 'Georg Fischer' ]
     const materils =['PVC-U ' , 'PVC-U ', 'PVC-U ' ,'PVC-U ' ,'PVC-U ' , 'PVC-U ' , 'PVC-U ']

@@ -5,7 +5,7 @@ import Congrat from "../Globals/Congrat";
 import Distributions from "../Globals/Distributors";
 import LanguageContext from "../../LanguageContext";
 const PartnerIndex = () => {
-  const { language, toggleLanguage, ar, en, light, rtl } =
+  const {  ar, rtl } =
   useContext(LanguageContext);
   return (
     <div className={rtl}>

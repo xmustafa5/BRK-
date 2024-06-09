@@ -5,7 +5,7 @@ import MainDistributors from "./MainDistributors.jsx";
 import LanguageContext from "../../LanguageContext.js";
 
 export default function OurDistributors() {
-  const { language, toggleLanguage, ar, en, light, rtl } =
+  const {  ar, rtl } =
     useContext(LanguageContext);
   return (
     <div className={rtl}>

@@ -6,7 +6,7 @@ import Congrat from '../Globals/Congrat'
 import Distributions from '../Globals/Distributors'
 
 export default function ContactUs() {
-  const { language, toggleLanguage, ar, en, light, rtl } =
+  const {ar, rtl } =
   useContext(LanguageContext);
   return (
     <div className={rtl}>

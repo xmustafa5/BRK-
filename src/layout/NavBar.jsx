@@ -9,7 +9,7 @@ import LanguageContext from "../LanguageContext";
 
 const NavBar = () => {
   const [IsMenuOpened, setIsMenuOpened] = useState(false);
-  const { language, toggleLanguage, ar, en, light } =
+  const { toggleLanguage, ar, light } =
     useContext(LanguageContext);
   function toggleMenu() {
     setIsMenuOpened((prev) => !prev);

@@ -7,7 +7,7 @@ import Distributions from "../Globals/Distributors";
 import { useContext } from "react";
 import LanguageContext from "../../LanguageContext";
 export default function AboutPage() {
-  const { language, toggleLanguage, ar, en, light, rtl } =
+  const {  ar, rtl } =
     useContext(LanguageContext);
   return (
     <div className={rtl}>

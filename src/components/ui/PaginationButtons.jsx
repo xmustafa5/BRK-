@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import LanguageContext from '../../LanguageContext';
 
 const PaginationButtons = () => {
-  const { ar, rtl } = useContext(LanguageContext);
+  const { ar } = useContext(LanguageContext);
 
   return (
     <nav >

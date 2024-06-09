@@ -4,7 +4,7 @@ import tubes from "../../assets/img/Product/tubes.png";
 import LanguageContext from "../../LanguageContext";
 
 const ProductInfo = () => {
-  const { ar, rtl } = useContext(LanguageContext);
+  const { ar } = useContext(LanguageContext);
 
   return (
    
@@ -15,9 +15,9 @@ const ProductInfo = () => {
           </div>
           <span className="flex items-center">
             <span className="text-black font-semibold text-sm">{ar? 'ملف البيانات ' :  'Datasheet:'}</span>
-            <a href="#" target="_blank" className="mx-2">
+            {/* <a href="#" target="_blank" className="mx-2">
               {pdf}
-            </a>
+            </a> */}
           </span>
         </div>
         <div className={`p-3 ${ar? `border-r-0` :`border-r-2` } border-gray-100`}>

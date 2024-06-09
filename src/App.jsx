@@ -10,7 +10,6 @@ import ContactUs from "./components/contact-us";
 import ProductsPage from "./pages/Products";
 import ProductsPageByCatigory from "./pages/ProductsPage";
 import SingleProductPage from "./pages/Products/SingleProductPage";
-import MobileProductInfo from "./components/ui/MobileProductInfo";
 
 function App() {
   return (
@@ -19,10 +18,13 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/aboutus" element={<AboutPage />} />
         <Route path="/partners" element={<PartnerIndex />} />
-        <Route path="/products" element={<ProductsPage/>} />
-        <Route path="/productsByCatigory" element={<ProductsPageByCatigory/>} />
+        <Route path="/products" element={<ProductsPage />} />
+        <Route
+          path="/productsByCatigory"
+          element={<ProductsPageByCatigory />}
+        />
 
-        <Route path="/singleProduct" element={<SingleProductPage/>}/>
+        <Route path="/singleProduct" element={<SingleProductPage />} />
 
         <Route path="/our-distributors" element={<OurDistributors />} />
         <Route path="/media" element={<MediaPage />} />
